@@ -42,3 +42,4 @@ yarn-error.*
 
 # Server secrets — never commit or bundle
 server/config.js
+*.apk
