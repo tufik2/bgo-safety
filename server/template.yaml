@@ -1,0 +1,319 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  BGO Safety API — serverless backend for the BGO Safety mobile app.
+  API Gateway (HTTP API) -> Lambda (Node.js 20) -> DynamoDB + S3, with SES (email codes),
+  SNS (text codes), Secrets Manager (session signing key, SSO credential).
+
+Parameters:
+  Stage:
+    Type: String
+    Default: prod
+    AllowedPattern: '[a-z0-9-]+'
+    Description: Environment name used in resource names (e.g. prod, test).
+  SesRegion:
+    Type: String
+    Default: us-east-1
+    Description: Region where your SES sender identity is verified and out of the sandbox (can differ from the stack's region).
+  SnsRegion:
+    Type: String
+    Default: us-east-1
+    Description: Region where your SNS text messaging is set up (out of the SMS sandbox, spend limit, origination number).
+  SesFromAddress:
+    Type: String
+    Default: no-reply@refineddata.com
+    Description: Verified SES identity that sends access-code emails.
+  SesFromName:
+    Type: String
+    Default: BGO Safety
+  SesConfigurationSet:
+    Type: String
+    Default: ''
+    Description: Optional SES configuration set for delivery tracking.
+  SnsOriginationNumber:
+    Type: String
+    Default: none
+    Description: Leave as none. Forcing the toll-free number got texts blocked by Telus; with none, SNS picks the route like Refined Risk's existing 2FA. (none clears a value set by an earlier deploy.)
+  SmsWording:
+    Type: String
+    Default: bgo
+    AllowedValues: [bgo, registered-sample]
+    Description: Text-message wording. bgo = "Your BGO Safety verification code is 123456. It expires in 60 seconds." registered-sample = "RefinedRisk - Verification code is 123456". The texts are in server/src/notify.mjs.
+  SnsSenderId:
+    Type: String
+    Default: RefinedRisk
+    Description: Sender ID, as Refined Risk's existing 2FA uses. With no forced origination number, SNS picks a route carriers accept (Canadian phones show a number, not the name).
+  SsoMethod:
+    Type: String
+    Default: ''
+    AllowedValues: ['', okta, entra]
+    Description: Single sign-on provider (okta or entra). Blank turns SSO off.
+  SsoDomain:
+    Type: String
+    Default: ''
+    Description: Okta only — your Okta domain, e.g. https://bgo.okta.com
+  SsoTenantId:
+    Type: String
+    Default: ''
+    Description: Microsoft only — Directory (tenant) ID.
+  SsoClientId:
+    Type: String
+    Default: ''
+    Description: Client ID of the Okta app integration / Entra app registration.
+  SsoIssuer:
+    Type: String
+    Default: ''
+    Description: Optional issuer override, e.g. https://bgo.okta.com/oauth2/default for an Okta custom authorization server.
+  SsoButtonLabel:
+    Type: String
+    Default: ''
+    Description: Optional text for the sign-in button (default "Sign in with Okta" / "Sign in with Microsoft").
+  DemoMode:
+    Type: String
+    Default: 'true'
+    AllowedValues: ['true', 'false']
+    Description: POC only — lets the app add generated 2024/2025 demo surveys for a user's own properties.
+  AllowedEmailDomains:
+    Type: String
+    Default: ''
+    Description: Optional comma-separated list of email domains allowed to sign in with SSO.
+  CorsAllowOrigin:
+    Type: String
+    Default: '*'
+    Description: Allowed browser origin(s) for the web preview. Mobile apps do not need CORS.
+  ApiDomainName:
+    Type: String
+    Default: ''
+    Description: Optional custom address for the API, e.g. bgosafety.refineddata.com. Leave blank to use the AWS address.
+  ApiCertificateArn:
+    Type: String
+    Default: ''
+    Description: ARN of an issued ACM certificate for ApiDomainName, requested in the SAME region as this stack (ca-central-1).
+    AllowedPattern: '^$|^arn:aws[a-zA-Z-]*:acm:[a-z0-9-]+:\d{12}:certificate/.+$'
+  SessionDays:
+    Type: Number
+    Default: 30
+    Description: How long a sign-in lasts before the user must sign in again.
+
+Conditions:
+  HasConfigSet: !Not [!Equals [!Ref SesConfigurationSet, '']]
+  HasDomain: !Not [!Equals [!Ref ApiDomainName, '']]
+
+Globals:
+  Function:
+    Runtime: nodejs22.x
+    Architectures: [arm64]
+    MemorySize: 1024
+    Timeout: 30
+    Tracing: Active
+
+Resources:
+  # ---------------------------------------------------------------- Data
+  Table:
+    Type: AWS::DynamoDB::Table
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      TableName: !Sub bgo-safety-${Stage}
+      BillingMode: PAY_PER_REQUEST
+      AttributeDefinitions:
+        - { AttributeName: pk, AttributeType: S }
+        - { AttributeName: sk, AttributeType: S }
+      KeySchema:
+        - { AttributeName: pk, KeyType: HASH }
+        - { AttributeName: sk, KeyType: RANGE }
+      TimeToLiveSpecification: { AttributeName: ttl, Enabled: true }
+      PointInTimeRecoverySpecification: { PointInTimeRecoveryEnabled: true }
+      SSESpecification: { SSEEnabled: true }
+
+  Bucket:
+    Type: AWS::S3::Bucket
+    DeletionPolicy: Retain
+    UpdateReplacePolicy: Retain
+    Properties:
+      BucketName: !Sub bgo-safety-${Stage}-${AWS::AccountId}
+      PublicAccessBlockConfiguration:
+        BlockPublicAcls: true
+        BlockPublicPolicy: true
+        IgnorePublicAcls: true
+        RestrictPublicBuckets: true
+      BucketEncryption:
+        ServerSideEncryptionConfiguration:
+          - ServerSideEncryptionByDefault: { SSEAlgorithm: AES256 }
+      OwnershipControls:
+        Rules: [{ ObjectOwnership: BucketOwnerEnforced }]
+      VersioningConfiguration: { Status: Enabled }
+      CorsConfiguration:
+        CorsRules:
+          - AllowedMethods: [GET, PUT]
+            AllowedOrigins: [!Ref CorsAllowOrigin]
+            AllowedHeaders: ['*']
+            MaxAge: 3000
+
+  BucketPolicy:
+    Type: AWS::S3::BucketPolicy
+    Properties:
+      Bucket: !Ref Bucket
+      PolicyDocument:
+        Statement:
+          - Sid: DenyInsecureTransport
+            Effect: Deny
+            Principal: '*'
+            Action: 's3:*'
+            Resource: [!GetAtt Bucket.Arn, !Sub '${Bucket.Arn}/*']
+            Condition: { Bool: { 'aws:SecureTransport': 'false' } }
+
+  # Session signing key (generated) + SSO credential (you fill in) — never in the app.
+  AppSecret:
+    Type: AWS::SecretsManager::Secret
+    Properties:
+      Name: !Sub bgo-safety/${Stage}/app
+      Description: BGO Safety API secrets (session signing key, SSO credential)
+      GenerateSecretString:
+        SecretStringTemplate: '{"ssoConfigType":"clientSecret","ssoClientSecret":"","ssoPrivateCertificate":"","ssoPublicCertificate":"","ssoKeyId":""}'
+        GenerateStringKey: jwtSecret
+        PasswordLength: 64
+        ExcludePunctuation: true
+
+  # ---------------------------------------------------------------- API
+  HttpApi:
+    Type: AWS::Serverless::HttpApi
+    Properties:
+      StageName: !Ref Stage
+      CorsConfiguration:
+        AllowOrigins: [!Ref CorsAllowOrigin]
+        AllowMethods: [GET, POST, PUT, PATCH, DELETE, OPTIONS]
+        AllowHeaders: [authorization, content-type]
+        MaxAge: 600
+      DefaultRouteSettings:
+        ThrottlingBurstLimit: 50
+        ThrottlingRateLimit: 20
+
+
+  # Optional custom address (e.g. https://bgosafety.refineddata.com), mapped to the root: no /prod in its paths
+  ApiDomain:
+    Type: AWS::ApiGatewayV2::DomainName
+    Condition: HasDomain
+    Properties:
+      DomainName: !Ref ApiDomainName
+      DomainNameConfigurations:
+        - CertificateArn: !Ref ApiCertificateArn
+          EndpointType: REGIONAL
+          SecurityPolicy: TLS_1_2
+
+  ApiDomainMapping:
+    Type: AWS::ApiGatewayV2::ApiMapping
+    Condition: HasDomain
+    Properties:
+      DomainName: !Ref ApiDomain
+      ApiId: !Ref HttpApi
+      Stage: !Ref HttpApi.Stage
+
+  ApiFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: !Sub bgo-safety-${Stage}-api
+      CodeUri: .
+      Handler: src/handler.handler
+      Description: BGO Safety API (all routes)
+      Environment:
+        Variables:
+          STAGE: !Ref Stage
+          TABLE_NAME: !Ref Table
+          BUCKET_NAME: !Ref Bucket
+          SECRET_ARN: !Ref AppSecret
+          SES_REGION: !Ref SesRegion
+          SNS_REGION: !Ref SnsRegion
+          SES_FROM_ADDRESS: !Ref SesFromAddress
+          SES_FROM_NAME: !Ref SesFromName
+          SES_CONFIGURATION_SET: !Ref SesConfigurationSet
+          SNS_ORIGINATION_NUMBER: !Ref SnsOriginationNumber
+          SNS_SENDER_ID: !Ref SnsSenderId
+          SMS_WORDING: !Ref SmsWording
+          SSO_METHOD: !Ref SsoMethod
+          SSO_DOMAIN: !Ref SsoDomain
+          SSO_TENANT_ID: !Ref SsoTenantId
+          SSO_CLIENT_ID: !Ref SsoClientId
+          SSO_ISSUER: !Ref SsoIssuer
+          SSO_BUTTON_LABEL: !Ref SsoButtonLabel
+          DEMO_MODE: !Ref DemoMode
+          ALLOWED_EMAIL_DOMAINS: !Ref AllowedEmailDomains
+          SESSION_DAYS: !Ref SessionDays
+          API_PUBLIC_URL: !If [HasDomain, !Sub 'https://${ApiDomainName}', '']
+          NODE_OPTIONS: --enable-source-maps
+      Policies:
+        - DynamoDBCrudPolicy: { TableName: !Ref Table }
+        - S3CrudPolicy: { BucketName: !Ref Bucket }
+        - AWSSecretsManagerGetSecretValuePolicy: { SecretArn: !Ref AppSecret }
+        - Statement:
+            - Sid: SendCodeEmails
+              Effect: Allow
+              Action: [ses:SendEmail]
+              Resource:
+                - !Sub arn:${AWS::Partition}:ses:${SesRegion}:${AWS::AccountId}:identity/*
+                - !If
+                  - HasConfigSet
+                  - !Sub arn:${AWS::Partition}:ses:${SesRegion}:${AWS::AccountId}:configuration-set/${SesConfigurationSet}
+                  - !Ref AWS::NoValue
+            - Sid: SendCodeTexts
+              Effect: Allow
+              Action: [sns:Publish]
+              Resource: '*'
+      Events:
+        All:
+          Type: HttpApi
+          Properties:
+            ApiId: !Ref HttpApi
+            Path: /{proxy+}
+            Method: ANY
+
+  ApiLogGroup:
+    Type: AWS::Logs::LogGroup
+    Properties:
+      LogGroupName: !Sub /aws/lambda/bgo-safety-${Stage}-api
+      RetentionInDays: 90
+
+  ErrorAlarm:
+    Type: AWS::CloudWatch::Alarm
+    Properties:
+      AlarmName: !Sub bgo-safety-${Stage}-api-errors
+      AlarmDescription: The BGO Safety API is throwing errors.
+      Namespace: AWS/Lambda
+      MetricName: Errors
+      Dimensions: [{ Name: FunctionName, Value: !Ref ApiFunction }]
+      Statistic: Sum
+      Period: 300
+      EvaluationPeriods: 1
+      Threshold: 5
+      ComparisonOperator: GreaterThanOrEqualToThreshold
+      TreatMissingData: notBreaching
+
+Outputs:
+  ApiUrl:
+    Description: Put this in the app's src/config.js as API_BASE_URL
+    Value: !If
+      - HasDomain
+      - !Sub https://${ApiDomainName}
+      - !Sub https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}
+  ApiDomainTarget:
+    Condition: HasDomain
+    Description: Point your DNS record for ApiDomainName here (CNAME, or a Route 53 alias)
+    Value: !GetAtt ApiDomain.RegionalDomainName
+  SsoRedirectUri:
+    Description: Add this as the sign-in redirect URI in Okta (or as a Web redirect URI in Microsoft Entra)
+    Value: !If
+      - HasDomain
+      - !Sub https://${ApiDomainName}/auth/sso/callback
+      - !Sub https://${HttpApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/auth/sso/callback
+  TableName:
+    Description: DynamoDB table (used by scripts/load-data.mjs)
+    Value: !Ref Table
+  BucketName:
+    Description: S3 bucket for photos and attachments
+    Value: !Ref Bucket
+  SecretArn:
+    Description: Secrets Manager secret holding the session key and SSO credential
+    Value: !Ref AppSecret
+  FunctionName:
+    Description: Lambda function (CloudWatch logs under /aws/lambda/<name>)
+    Value: !Ref ApiFunction

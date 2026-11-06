@@ -1,0 +1,1853 @@
+{
+ "id": "126059aa-4863-4714-b9be-2a963f16dffe",
+ "module": "environmental",
+ "title": "2026 Environmental Questionnaire",
+ "group": "Environmental Checklist",
+ "sourceModule": "ENVIRONMENTAL",
+ "level": "PROPERTY",
+ "year": "2026",
+ "approvalRequired": true,
+ "showPhotosIcon": false,
+ "showAttachmentIcon": false,
+ "showCommentIcon": false,
+ "importedFrom": "source-environmental.xml",
+ "categories": [
+  {
+   "id": "d7e066d7-0a21-409c-b419-4432fd38a62f",
+   "sequence": 1,
+   "title": "Property Details",
+   "titleFr": "Détails de la propriété",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "67efda53-ef55-419a-9cb0-90f42ad76d88",
+     "sequence": 1,
+     "title": "Is this property currently developed?",
+     "label": "1.1 Site Utilization",
+     "instructions": null,
+     "titleFr": "Cette propriété est-elle actuellement exploitée?",
+     "labelFr": "1.1 Utilisation du site",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "5039f396-4b58-4c63-8a78-812adab5ffa4",
+       "type": "text",
+       "title": "Property Type [Indus/Office/Retail/Res]:",
+       "titleFr": "Type de propriété [Industriel/Bureau/Commerce/Résidentiel] :",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "38d76948-e8c8-4234-a54e-3a33dfa60b7c",
+       "type": "numeric",
+       "title": "Approximate total building sq.ft:",
+       "titleFr": "Année de construction du bâtiment d’origine/de base :",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "3615a846-6f98-4d0d-a7c3-5e7a6f3d3309",
+       "type": "numeric",
+       "title": "Year of original/base building construction:",
+       "titleFr": "Nombre approximatif de pieds carrés du bâtiment :",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": false,
+       "taskTitle": null,
+       "due": null,
+       "createTask": false,
+       "assignedTo": [],
+       "taskTypes": []
+      },
+      {
+       "answer": "no",
+       "nonCompliant": false,
+       "taskTitle": null,
+       "due": null,
+       "createTask": false,
+       "assignedTo": [],
+       "taskTypes": []
+      }
+     ]
+    },
+    {
+     "id": "a7df3fff-c7b3-4d66-9748-fd56f7628abd",
+     "sequence": 2,
+     "title": "Is this property under development?",
+     "label": "1.2 Under Development",
+     "instructions": null,
+     "titleFr": "La propriété est-elle en cours de développement?",
+     "labelFr": "1.2. En cours de développement",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "67efda53-ef55-419a-9cb0-90f42ad76d88",
+       "answer": "no"
+      }
+     ],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "afb555a6-f2dd-4d89-b322-b3d28e5e315b",
+       "type": "comments",
+       "title": "When is substantial development completion currently anticipated?",
+       "titleFr": "Quand l’achèvement substantiel du développement est-il actuellement prévu?",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "8f4ed04c-437d-49db-aa4e-393757ea3f3d",
+     "sequence": 3,
+     "title": "Is this property currently vacant?",
+     "label": "1.3 Vacant Land",
+     "instructions": null,
+     "titleFr": "Cette propriété est-elle actuellement vacante?",
+     "labelFr": "1.3. Terrain vacant",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "a7df3fff-c7b3-4d66-9748-fd56f7628abd",
+       "answer": "no"
+      }
+     ],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes"
+     ],
+     "followUps": [
+      {
+       "id": "cd635fa6-f175-49b8-adbb-bd329a8b3f76",
+       "type": "comments",
+       "title": "Does BGO property management perform semi-frequent visits to document no evidence trespass/illegal dumping activities? Please include a short description of current BGO oversight responsibilities:",
+       "titleFr": "La gestion immobilière de BGO effectue-t-elle des visites semi-fréquentes pour vérifier qu’il n’y a pas de traces d’intrusion ou de déversement illégal? Veuillez inclure une brève description des responsabilités actuelles de BGO en matière de surveillance :",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "65f7dd58-57dd-4521-9df0-7ebd14e5754e",
+     "sequence": 4,
+     "title": "Is this facility tenant managed?",
+     "label": "1.4 Building Management",
+     "instructions": null,
+     "titleFr": "Cette installation est-elle gérée par un locataire?",
+     "labelFr": "1.4. Gestion des bâtiments",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "67efda53-ef55-419a-9cb0-90f42ad76d88",
+       "answer": "yes"
+      }
+     ],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "77053c32-8c82-4584-8827-1acecb8c31ec",
+   "sequence": 2,
+   "title": "Compliance/ Site review",
+   "titleFr": "Conformité/examen du site",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "30766bcf-6fbd-454d-9d41-432ff36384ca",
+     "sequence": 1,
+     "title": "Are you aware of any Compliance Orders/Warning/Infractions issued (within last 12 months) or currently outstanding at the property, including Orders to tenant(s)?",
+     "label": "2.1 Compliance Orders",
+     "instructions": null,
+     "titleFr": "Êtes-vous au courant de tout ordre de conformité, d’avertissements ou d’infractions émis (au cours des 12 derniers mois) ou en cours concernant la propriété, notamment les ordres émis au(x) locataire(s)?",
+     "labelFr": "2.1. Ordres de conformité",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "f40057e7-282e-4e67-b63e-88ae964d7efb",
+       "type": "heading",
+       "title": "Confirm the status of incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres d’incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "c84a235a-903d-4c33-b720-79ff0aae203d",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements concernant la nature de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "14aea08d-0424-4a7b-a3b1-200a8946ccc7",
+     "sequence": 2,
+     "title": "Has any environmentally related work ( i.e. assessments, environmental/asbestos/mould/IAQ work ) been conducted on-site within the past year?",
+     "label": "2.2 Environmental Work",
+     "instructions": null,
+     "titleFr": "Des activités liées à l’environnement (évaluations, travaux relatifs à l’environnement, à l’amiante, aux moisissures et à la qualité de l’air intérieur) ont-elles été effectuées sur le site au cours de l’année écoulée?",
+     "labelFr": "2.2. Activités liées à l’environnement",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "f584febe-7c7a-411e-b51d-07c543776c93",
+       "type": "heading",
+       "title": "Please confirm that all environmental reports have been uploaded to BORiS (CLICK HERE to review and/or upload Environmental reports).",
+       "titleFr": "Confirmez que tous les rapports environnementaux ont été téléchargés dans BORiS (CLIQUEZ ICI pour consulter et/ou télécharger les rapports environnementaux).",
+       "link": {
+        "label": "Environmental Reports",
+        "parent": "Environmental Reports",
+        "path": "/Environmental/Environmental_Reports"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "466f7c17-69d0-4987-8187-c66fea18be7f",
+       "type": "comments",
+       "title": "Please provide information regarding the type of work and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur le type de travail et la date à laquelle il a eu lieu.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "571cbee4-0847-48d5-a901-f7cfc9e28569",
+     "sequence": 3,
+     "title": "Are there any High/Moderate risk tenants as defined in Bentall Kennedy's Environmental Manual? Ensure that the tenant name, emergency number, the nature of risk is included in the \"Tenant Risk Levels\" record in BORIS.",
+     "label": "2.3 High/Moderate Risk Tenants",
+     "instructions": "High Risk Tenant: Tenants that work with more than one waste stream and/or generate one or more of those wastes in medium to large volumes. Typical examples of high risk operations include medium and heavy industries with complex processes, chemical manufactures, the oil and gas industry, dry cleaners, etc. High Risk tenants can also include tenants with any history of spills or poor housekeeping. Moderate Risk Tenant: tenants that generate more than one&#8216;small and low risk&#8217; waste stream and/or where tenants generate only one,readily manageable, medium or large waste stream and exhibit &#8220;good house keeping&#8221; and have no record of environmental infractions or impact on the environment. Typical examples of moderate risk operations include metal fabrication plants, auto body shops and automotive repair facilities (but not fuel providing stations).",
+     "titleFr": "Y a-t-il des locataires à risque élevé/modéré tels que définis dans le manuel environnemental de Bentall Kennedy? Assurez-vous que le nom du locataire, le numéro d’urgence et la nature du risque sont inclus dans le rapport « Niveaux de risque du locataire » dans BORiS.",
+     "labelFr": "2.3. Locataires à risque élevé/modéré",
+     "instructionsFr": "Locataires posant unrisque &#233;lev&#233;&#160;: Les locataires qui travaillent avec plus d&#8217;un flux de r&#233;sidus,l&#8217;un de ceux-ci pouvant repr&#233;senter une quantit&#233; moyenne ou importante.Exemples d&#8217;usages d&#8217;op&#233;rations &#224; risque &#233;lev&#233; typiques&#160;: industrie moyenneet lourde faisant appel &#224; des proc&#233;d&#233;s complexes, fabricants de produitschimiques, secteurs p&#233;trolier et gazier, nettoyeurs &#224; sec, etc. On peut aussiclasser &#224; risque &#233;lev&#233; un locataire poss&#233;dant une mauvaise feuille de routeenvironnementale (d&#233;versements, laxisme, etc.).\n\n\n\nLocataire &#224; risquemod&#233;r&#233;&#160;: les locataires &#224; risque mod&#233;r&#233; g&#233;n&#232;rent plus qu&#8217;un&#171;&#160;petit&#160;&#187; flux de r&#233;sidus et flux &#171;&#160;&#224; faible risque&#160;&#187;, ouencore ils g&#233;n&#232;rent un seul flux moyen ou important et facile &#224; g&#233;rer; parcontre, dans ce cas, le locataire doit faire preuve de bonnes habitudes etavoir un casier environnemental vierge. Parmi les exemples typiquesd&#8217;op&#233;rations &#224; risque mod&#233;r&#233;, on peut citer les usines de fabrication dem&#233;taux, les ateliers de carrosserie et les installations de r&#233;parationautomobile (qui ne vendent pas d&#8217;essence).",
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "7fadd73f-3a30-41bc-8a23-cafc5fe20a1f",
+       "type": "heading",
+       "title": "Confirm status of High/Moderate risk tenant records (Click here).",
+       "titleFr": "Confirmez l’état des dossiers des locataires à risque élevé/modéré (cliquez ici).",
+       "link": {
+        "label": "Tenant Risk Levels",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Tenant_Risk_Levels"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "51d882e8-9c04-4dd1-bf41-1c547cea6048",
+       "type": "comments",
+       "title": "Please provide tenant name and the nature of risk.",
+       "titleFr": "Veuillez indiquer le nom du locataire et la nature du risque.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "5b533b21-b06d-456c-ada6-4bdf437f2ed2",
+     "sequence": 4,
+     "title": "Were there any observations made at the property or raised/reported by the tenant(s) contractors or service providers that you feel warrants further review by the Regional Environmental Coordinator? If already reported, provide the Incident ID Number(s) (automatically generated by BORiS when you create an Incident Report) and any additional comments.",
+     "label": "2.4 Further Incident Review",
+     "instructions": null,
+     "titleFr": "Des observations ont-elles été faites relativement à la propriété ou signalées par des locataires ou des sous-traitants (y compris les fournisseurs de services) qui nécessitent selon vous une analyse approfondie de la part du coordonnateur régional de l’environnement? Si l’incident a déjà été signalé, fournissez le(s) numéro(s) d’identification de l’incident (généré[s] automatiquement par BORiS lorsque vous créez un rapport d’incident) et tout commentaire supplémentaire.",
+     "labelFr": "2.4. Examen d’autres incidents",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "7afa835f-c920-454a-ac21-8446ef929832",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "843ff2b6-030a-4947-976c-a5efb16e6a8b",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "60bad621-4a89-4bc4-b0bb-3d7e12a66d5a",
+   "sequence": 3,
+   "title": "Primary Hazardous Substances",
+   "titleFr": "Substances dangereuses primaires",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "b342f1af-7458-4f9b-9707-27724ab76ca2",
+     "sequence": 1,
+     "title": "Has a baseline asbestos-containing material (ACM) survey been completed for this property?",
+     "label": "3.1(a) Asbestos",
+     "instructions": null,
+     "titleFr": "Une étude de base sur les matériaux contenant de l’amiante (MCA) a-t-elle été réalisée pour cette propriété?",
+     "labelFr": "3.1. (a) Amiante",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "no",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "be4489b1-4076-4c8a-a41c-936f65249a0c",
+       "type": "heading",
+       "title": "Please CLICK HERE to confirm that the baseline building-wide asbestos survey has been uploaded to BORiS. If not, please upload now.",
+       "titleFr": "CLIQUEZ ICI pour confirmer que l’étude de référence sur l’amiante pour l’ensemble du bâtiment a été téléchargée dans BORiS. Si ce n’est pas le cas, veuillez la télécharger maintenant.",
+       "link": {
+        "label": "Environmental Reports",
+        "parent": "Environmental Reports",
+        "path": "/Environmental/Environmental_Reports"
+       },
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "3461d00c-22cf-4d05-907a-e121d65014d1",
+     "sequence": 2,
+     "title": "Are there any known, or suspected, ACMs present on-Site? (If unsure, refer to original survey and/or most recent reassessment report saved under environmental reports)",
+     "label": "3.1(b) Asbestos",
+     "instructions": null,
+     "titleFr": "Y a-t-il des MCA connus ou suspectés sur le site? (En cas de doute, se référer à l’étude initiale et/ou au rapport de réévaluation le plus récent sauvegardé dans les rapports environnementaux.)",
+     "labelFr": "3.1. (b) Amiante",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "03061828-8023-4b6b-8163-7b41864c274f",
+       "type": "heading",
+       "title": "CLICK HERE to review the asbestos reports that have been uploaded to BORiS",
+       "titleFr": "CLIQUEZ ICI pour consulter les rapports sur l’amiante qui ont été téléchargés dans BORiS.",
+       "link": {
+        "label": "Environmental Reports",
+        "parent": "Environmental Reports",
+        "path": "/Environmental/Environmental_Reports"
+       },
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "3910660a-17bb-43b2-9448-81b9bf68225a",
+     "sequence": 3,
+     "title": "Has an ACM reassessment been completed by an approved BGO environmental consultant in the last 12 months (or 24 months if in QC)?",
+     "label": "3.1(c) Asbestos",
+     "instructions": null,
+     "titleFr": "Une réévaluation des MCA a-t-elle été réalisée par un consultant en environnement agréé par BGO au cours des 12 derniers mois (ou des 24 derniers mois au Québec)?",
+     "labelFr": "3.1. (c) Amiante",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "3461d00c-22cf-4d05-907a-e121d65014d1",
+       "answer": "yes"
+      }
+     ],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "e215dda7-de72-43dc-b826-81a93bf4facf",
+       "type": "heading",
+       "title": "Please confirm that all environmental reports have been uploaded to BORiS (CLICK HERE to review and/or upload Environmental reports).",
+       "titleFr": "Confirmez que tous les rapports environnementaux ont été téléchargés dans BORiS (CLIQUEZ ICI pour consulter et/ou télécharger les rapports environnementaux).",
+       "link": {
+        "label": "Environmental Reports",
+        "parent": "Environmental Reports",
+        "path": "/Environmental/Environmental_Reports"
+       },
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "07d0ab9f-5834-4229-beed-048daaeeed11",
+     "sequence": 4,
+     "title": "Have there been any significant concerns raised over the past 12 months regarding Asbestos?",
+     "label": "3.1(d) Asbestos",
+     "instructions": null,
+     "titleFr": "Des préoccupations importantes concernant l’amiante ont-elles été soulevées au cours des 12 derniers mois?",
+     "labelFr": "3.1. (d) Amiante",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "3461d00c-22cf-4d05-907a-e121d65014d1",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "b7cc93cf-7d8c-43a8-ab90-c821bea18225",
+       "type": "heading",
+       "title": "Confirm that the Asbestos records are up-to-date (Click here).",
+       "titleFr": "Confirmez que les dossiers relatifs à l’amiante sont à jour (cliquez ici).",
+       "link": {
+        "label": "Asbestos Materials",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Primary_Hazardous_Substance/Asbestos_Materials"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "d24243fd-12dd-4f3d-a31a-7c4e2dded0b2",
+       "type": "comments",
+       "title": "Please provide information regarding the type of work and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur le type de travail et la date à laquelle il a eu lieu.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "ca687335-1ec3-46c7-b218-b6fc7a544550",
+     "sequence": 5,
+     "title": "Is there PCB-containing equipment at the property?",
+     "label": "3.2(a)  PCBs",
+     "instructions": null,
+     "titleFr": "Le bien contient-il des équipements contenant des BPC?",
+     "labelFr": "3.2. (a) BPC",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "38fac434-dd69-410f-ab8f-6eaa5ec63518",
+       "type": "heading",
+       "title": "Confirm that the PCB records are up-to-date (Click here).",
+       "titleFr": "Confirmez que les dossiers relatifs aux BPC sont à jour (cliquez ici).",
+       "link": {
+        "label": "PCB Equipment",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Primary_Hazardous_Substance/PCB/PCB_Equipment"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "a43a5840-e8a2-431e-86c7-8acb56a73319",
+     "sequence": 6,
+     "title": "Have there been any significant concerns raised over the past 12 months regarding PCBs?",
+     "label": "3.2 (b) PCBs",
+     "instructions": null,
+     "titleFr": "Des préoccupations importantes ont-elles été soulevées au cours des 12 derniers mois en ce qui concerne les BPC?",
+     "labelFr": "3.2. (b) BPC",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "ca687335-1ec3-46c7-b218-b6fc7a544550",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "cccdbf39-e322-48c7-beeb-e20ef8cd54bc",
+       "type": "comments",
+       "title": "Please provide information regarding the type of work and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur le type de travail et la date à laquelle il a eu lieu.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "c7273731-3031-4916-9d19-c9243a130b3a",
+     "sequence": 7,
+     "title": "Does any base building equipment contain ODS, i.e. CFCs, HCFCs, Halons, R-22?",
+     "label": "3.3 Ozone Depleting Substances (ODS)",
+     "instructions": null,
+     "titleFr": "L’équipement d’un bâtiment de base contient-il des SAO, c’est-à-dire des CFC, des HCFC, des halons, du R-22?",
+     "labelFr": "3.3. Substances appauvrissant la couche d’ozone (SAO)",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "836eec1a-520e-45a3-9866-58605359938b",
+       "type": "heading",
+       "title": "Confirm the status of the ODS-containing equipment records (Click here to update or create a new record).",
+       "titleFr": "Confirmez l’état des registres relatifs aux équipements contenant des SAO (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Ozone Depleting Substances",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Primary_Hazardous_Substance/Ozone_Depleting_Substances"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "a4373806-c30a-46a2-b107-b3d435482e0f",
+     "sequence": 8,
+     "title": "Does the property have a legionella control plan?",
+     "label": "3.4 Legionella",
+     "instructions": null,
+     "titleFr": "Le bien dispose-t-il d’un plan de contrôle des légionelles?",
+     "labelFr": "3.4. Légionelles",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "6a96b45c-0754-422d-a364-bc7fa710c671",
+       "type": "heading",
+       "title": "Please CLICK HERE to confirm that the legionella control plan has been uploaded to BORiS",
+       "titleFr": "CLIQUEZ ICI pour confirmer que le plan de contrôle des légionelles a été téléchargé dans BORiS.",
+       "link": {
+        "label": "Environmental Reports",
+        "parent": "Environmental Reports",
+        "path": "/Environmental/Environmental_Reports"
+       },
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "3fe7f752-65ec-4992-8249-f432db38ef1e",
+     "sequence": 9,
+     "title": "Have there been any significant concerns raised over the past 12 months regarding Indoor Air Quality?",
+     "label": "3.5 IAQ",
+     "instructions": null,
+     "titleFr": "Des problèmes importants ont-ils été soulevés au cours des 12 derniers mois concernant la qualité de l’air intérieur (QAI)?",
+     "labelFr": "3.5. QAI",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "3e5efc6d-cc24-4143-801c-3f17a5d23c03",
+       "type": "heading",
+       "title": "Confirm that the IAQ records are up-to-date (Click here).",
+       "titleFr": "Confirmez que les registres QAI sont à jour (cliquez ici).",
+       "link": {
+        "label": "Indoor Air Quality",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Indoor_Air_Quality"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "7a52913d-d6e0-4b24-8835-03a666f8569c",
+       "type": "comments",
+       "title": "Please provide information regarding the type of work and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur le type de travail et la date à laquelle il a eu lieu.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "af7337a0-26bd-410e-bbc7-ab0ca1756f14",
+     "sequence": 10,
+     "title": "Have there been any spills/staining of concern noted over the past 12 months?",
+     "label": "3.6 Spills",
+     "instructions": null,
+     "titleFr": "Des déversements ou des taches préoccupants ont-ils été constatés au cours des 12 derniers mois?",
+     "labelFr": "3.6. Déversements",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "43e482b2-3824-4633-99c3-279fe9db745e",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "40002561-4428-4688-8229-347a38e2fe35",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "70322d00-64ff-48d0-927c-ddb3e29e4550",
+     "sequence": 11,
+     "title": "Have there been any significant concerns raised over the past 12 months regarding Moisture/Water Intrusion or Mould?",
+     "label": "3.7 Water Intrusion",
+     "instructions": null,
+     "titleFr": "Des préoccupations importantes ont-elles été soulevées au cours des 12 derniers mois concernant l’humidité ou l’intrusion d’eau?",
+     "labelFr": "3.7. Intrusion d’eau",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "9e3d4c58-eec8-4381-881a-17c8ed035770",
+       "type": "heading",
+       "title": "Confirm the status of incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres d’incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "c8a0970c-ebdd-43a6-b6c1-1ab55dfd51dc",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements concernant la nature de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "ca4a50af-2dcd-4dd0-af64-a82d1766ddf3",
+     "sequence": 12,
+     "title": "Have there been any significant concerns raised over the past 12 months regarding Stained/Distressed Vegetation? (e.g. dead grass from a chemical spill, etc.)?",
+     "label": "3.8 Vegetation",
+     "instructions": null,
+     "titleFr": "Des problèmes importants ont-ils été relevés au cours des 12 derniers mois en ce qui concerne la végétation tachée ou détruite (p. ex., de l’herbe morte à la suite d’un déversement de produits chimiques, etc.)?",
+     "labelFr": "3.8. Végétation",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "31600972-3440-4cb5-970f-c6e63500526b",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "10266a1f-2c75-4598-8c7b-6dfbf555c0d2",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "6935989a-97a8-47ba-9dd9-88f5dae14734",
+     "sequence": 13,
+     "title": "Have there been any significant concerns raised over the past 12 months regarding Air Emissions/Noise (Base Building)? Are there permits in place?",
+     "label": "3.9 Air/Noise (Building)",
+     "instructions": null,
+     "titleFr": "Des problèmes importants ont-ils été soulevés au cours des 12 derniers mois concernant les émissions atmosphériques/bruits (bâtiment de base)? Des permis ont-ils été délivrés?",
+     "labelFr": "3.9. Air/bruit (bâtiment)",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "29d5e52a-d150-4d49-82bd-31baab29ef5d",
+       "type": "heading",
+       "title": "Confirm the status of incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres d’incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "72338747-3441-499a-9e33-6b8bfc3280bf",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements concernant la nature de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "7b9d3fd1-5c87-4d16-abc7-a27e6dc09854",
+     "sequence": 14,
+     "title": "Have there been any significant concerns raised over the past 12 months regarding Air Emissions/Noise (Tenant)? Are there permits in place?",
+     "label": "3.10 Air/Noise (Tenant)",
+     "instructions": null,
+     "titleFr": "Des problèmes importants ont-ils été soulevés au cours des 12 derniers mois concernant les émissions atmosphériques/bruits (locataire)? Des permis ont-ils été délivrés?",
+     "labelFr": "3.10. Air/bruit (locataire)",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "36a8c62f-9464-44b2-b3e0-fce599508a2f",
+       "type": "heading",
+       "title": "Confirm the status of incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres d’incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "c3d08067-97e9-4637-92d3-0b91a46bbc1e",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements concernant la nature de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "b23a8a28-32dc-4d98-ac6b-8a81e5db58ef",
+   "sequence": 4,
+   "title": "Parking Areas/ Un-utilized Land",
+   "titleFr": "Stationnements/terrain vacant",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "9f44818f-5809-46c8-9e4c-f9060207e7ae",
+     "sequence": 1,
+     "title": "Have there been any concerns (i.e. visual oil sheen, debris, other obstructions, etc.) associated with Catch Basins?",
+     "label": "4.1 Catch Basins",
+     "instructions": null,
+     "titleFr": "Des préoccupations ont-elles été soulevées (p. ex., reflets d’huile, débris, autres obstructions, etc.) en ce qui concerne les bassins récepteurs?",
+     "labelFr": "4.1. Bassins récepteurs",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "a6e938bb-668a-41c5-ba14-3770729d294a",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "e8d76c9f-a029-42d7-9e4d-cc0aabdbac79",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "c53c951a-6d19-4319-a946-034b44153bd8",
+     "sequence": 2,
+     "title": "Have there been any concerns (i.e. visual oil sheen, debris, other obstructions, etc.) associated with Un-utilized Land?",
+     "label": "4.2 Un-utilized Land",
+     "instructions": null,
+     "titleFr": "Des préoccupations ont-elles été soulevées (p. ex., reflets d’huile, débris, autres obstructions, etc.) en ce qui concerne les terrains non utilisés?",
+     "labelFr": "4.2. Terrains inutilisés",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "38e42244-07ce-4538-89be-5f4569ff8a55",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "297cbb0a-3521-427a-8346-0a608b5ac1d0",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "b5da50fb-edb3-4402-ad9a-414cf51fd800",
+     "sequence": 3,
+     "title": "Have there been any concerns (i.e. visual oil sheen, debris, other obstructions, etc.) associated with Parking Areas?",
+     "label": "4.3 Parking Areas",
+     "instructions": null,
+     "titleFr": "Les aires de stationnement posent-elles des problèmes (reflets d’huile, débris, autres obstructions, etc.)?",
+     "labelFr": "4.3. Aires de stationnement",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "04251d65-05c0-4c51-934e-e8343b44cd93",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "2e52db9c-6492-4510-9b4e-bf2e86633b99",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "0548d498-b4da-450c-8dc5-e9fb536fd322",
+   "sequence": 5,
+   "title": "USTs",
+   "titleFr": "Réservoir de stockage souterrain (RSS)",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "71da8fca-5f6b-4281-af00-beec7377b325",
+     "sequence": 1,
+     "title": "Did you observe or are you aware of any Underground Storage Tanks (USTs) that are present at the site?",
+     "label": "5.1 USTs",
+     "instructions": null,
+     "titleFr": "Avez-vous observé ou êtes-vous au courant de la présence de réservoirs de stockage souterrains (RSS) sur le site?",
+     "labelFr": "5.1. RSS",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [],
+     "correctiveActions": []
+    },
+    {
+     "id": "91dab896-b05d-4b5c-b309-a7be8c1cb098",
+     "sequence": 2,
+     "title": "Are the USTs tenant owned or tenant maintained?",
+     "label": "5.2 Tenant UST",
+     "instructions": "Ensure that the UST information is entered and up-to-date in the BORiS records.",
+     "titleFr": "Les réservoirs de stockage souterrains appartiennent-ils au locataire ou sont-ils entretenus par lui?",
+     "labelFr": "5.2. Réservoir de stockage souterrain du locataire",
+     "instructionsFr": "Assurez-vous que lesrenseignements sur les RSS sont saisis et mis &#224; jour dans les registres BORiS.",
+     "showWhen": [
+      {
+       "questionId": "71da8fca-5f6b-4281-af00-beec7377b325",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "b5c0cfbc-a58e-438c-838d-1938b5db49c7",
+       "type": "heading",
+       "title": "Confirm the status of UST records (Click here to update or create a new record).",
+       "titleFr": "Confirmez l’état des registres RSS (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Underground Storage Tanks",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Chemical_Storage/Underground_Storage_Tanks"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "ed2e4af6-9e4a-435e-9570-c942244a45fe",
+     "sequence": 3,
+     "title": "Is there any evidence of spills. leaks, staining, etc. associated with the UST maintained by the tenant? Have you entered the spill, leak, etc. associated with the Tenant maintained UST in BORIS?",
+     "label": "5.3 Tenant UST Spills",
+     "instructions": null,
+     "titleFr": "Existe-t-il des preuves de déversements, de fuites, de taches, etc., associé(e)s au RSS entretenu par le locataire? Avez-vous saisi dans BORiS le déversement, la fuite, etc., associé(e) au RSS entretenu par le locataire?",
+     "labelFr": "5.3. Déversements de réservoirs de stockage souterrains du locataire",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "91dab896-b05d-4b5c-b309-a7be8c1cb098",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "8879926a-51ef-49e0-bc68-583bf75a3f64",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "42e1c89f-a141-458f-9466-728f5f22346f",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "465c7cdb-d5f8-471b-8fea-c6318c702aad",
+     "sequence": 4,
+     "title": "Are there USTs on site that are owned or maintained by the property owner? (Please ensure all information on USTs at the site has been entered into BORIS).",
+     "label": "5.4 Property UST",
+     "instructions": "Ensure that the UST information is entered and up-to-date in the BORiS records.",
+     "titleFr": "Existe-t-il sur le site des cuves de stockage RSS appartenant au propriétaire ou entretenues par lui? (Veuillez vous assurer que tous les renseignements relatifs aux RSS sur le site ont été saisis dans BORiS.)",
+     "labelFr": "5.4. RSS de la propriété",
+     "instructionsFr": "Assurez-vous que les renseignements sur les RSS sont saisis et mis &#224; jour dans les registres BORiS.",
+     "showWhen": [
+      {
+       "questionId": "91dab896-b05d-4b5c-b309-a7be8c1cb098",
+       "answer": "no"
+      },
+      {
+       "questionId": "71da8fca-5f6b-4281-af00-beec7377b325",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "7b2c0136-feec-4638-b744-367785e82775",
+       "type": "heading",
+       "title": "Confirm the status of UST records (Click here to update or create a new record).",
+       "titleFr": "Confirmez l’état des registres RSS (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Underground Storage Tanks",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Chemical_Storage/Underground_Storage_Tanks"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "aaac6680-3fc9-4fe1-b020-c9676672360d",
+     "sequence": 5,
+     "title": "Is there any evidence of spills, leaks, staining, etc. associated with the UST maintained by the property owner? Have you entered the spill, leak, etc. associated with the property owner maintained UST(s) in BORIS?",
+     "label": "5.5 Property UST Spills",
+     "instructions": null,
+     "titleFr": "Existe-t-il des preuves de déversements, de fuites, de taches, etc., associées au RSS entretenu par le propriétaire? Avez-vous saisi dans BORiS le déversement, la fuite, etc., associé(e) au RSS entretenu par le propriétaire?",
+     "labelFr": "5.5. Déversements de RSS sur la propriété",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "465c7cdb-d5f8-471b-8fea-c6318c702aad",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "cdcca55f-5e42-46a4-930f-41dfb358b8fd",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "94384c63-53a3-4e13-acd4-d8cebf73a34d",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "5f8c9c4b-332b-419b-ad83-4eb456709699",
+   "sequence": 6,
+   "title": "ASTs",
+   "titleFr": "Réservoirs de surface (RS)",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "027a1a1b-e3eb-4f3b-86c8-e432d4dae4b9",
+     "sequence": 1,
+     "title": "Did you observe or are you aware of any Above Ground Storage Tanks (ASTs) being present at the site?",
+     "label": "6.1 ASTs",
+     "instructions": null,
+     "titleFr": "Avez-vous observé ou savez-vous que des réservoirs de surface (RS) sont présents sur le site?",
+     "labelFr": "6.1. RS",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [],
+     "correctiveActions": []
+    },
+    {
+     "id": "9b88cae0-0efb-4013-9ddb-fdeaf725f04a",
+     "sequence": 2,
+     "title": "Are the ASTs tenant owned or maintained?",
+     "label": "6.2 Tenant AST",
+     "instructions": "Ensure that the AST information is entered and up-to-date in the BORiS records.",
+     "titleFr": "Les réservoirs de surface appartiennent-ils au locataire ou sont-ils entretenus par lui?",
+     "labelFr": "6.2. RS du locataire",
+     "instructionsFr": "Assurez-vous que lesrenseignements sur les RS sont saisis et mis &#224; jour dans les registres BORiS.",
+     "showWhen": [
+      {
+       "questionId": "027a1a1b-e3eb-4f3b-86c8-e432d4dae4b9",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "f0d5d535-34ad-49b6-be9d-afa0b63ac63f",
+       "type": "heading",
+       "title": "Confirm the status of AST records (Click here to update or create a new record).",
+       "titleFr": "Confirmez l’état des registres sur les RS (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Aboveground Storage Tanks",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Chemical_Storage/Aboveground_Storage_Tanks"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "9dbc0560-ed5b-4e07-ba81-7dca690e70bc",
+     "sequence": 3,
+     "title": "Is there any evidence of spills, leaks, staining, etc. associated with the AST maintained by the tenant? Have you entered the spill, leak, etc. associated with the Tenant maintained AST(s) in BORIS?",
+     "label": "6.3 Tenant AST Spills",
+     "instructions": null,
+     "titleFr": "Existe-t-il des preuves de déversements, de fuites, de taches, etc., associées au réservoir de surface entretenu par le locataire? Avez-vous saisi dans BORiS le déversement, la fuite, etc., associé(e) au(x) réservoir(s) entretenu(s) par le locataire?",
+     "labelFr": "6.3. Déversements d’un RS du locataire",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "9b88cae0-0efb-4013-9ddb-fdeaf725f04a",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "67f8fa4e-49e2-4521-94d6-a5b4948bced2",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "184c8e7d-abac-48b5-a03b-c0678897fa5f",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "9e79e3ef-2987-4d2b-8c27-5407450737df",
+     "sequence": 4,
+     "title": "Are the ASTs on site owned or maintained by the property owner?",
+     "label": "6.4 Property AST",
+     "instructions": "Ensure that the AST information is entered and up-to-date in the BORiS records.",
+     "titleFr": "Les systèmes d’extraction d’air sur le site appartiennent-ils au propriétaire ou sont-ils entretenus par lui?",
+     "labelFr": "6.4. Propriété du RS",
+     "instructionsFr": "Assurez-vous que lesrenseignements sur les RS sont saisis et mis &#224; jour dans les registres BORiS.",
+     "showWhen": [
+      {
+       "questionId": "027a1a1b-e3eb-4f3b-86c8-e432d4dae4b9",
+       "answer": "yes"
+      },
+      {
+       "questionId": "9b88cae0-0efb-4013-9ddb-fdeaf725f04a",
+       "answer": "no"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "80c982f1-c111-4b11-b213-f55763cf62c6",
+       "type": "heading",
+       "title": "Confirm the status of AST records (Click here to update or create a new record).",
+       "titleFr": "Confirmez l’état des registres sur les RS (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Aboveground Storage Tanks",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Chemical_Storage/Aboveground_Storage_Tanks"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "836314e1-b5c8-431e-957b-cf862cc9b617",
+     "sequence": 5,
+     "title": "Is there any evidence of spills, leaks, staining, etc. associated with the AST maintained by the property owner? Have you entered the spill, leak, etc. associated with the property owner maintained AST(s) in BORIS?",
+     "label": "6.5 Property AST Spills",
+     "instructions": null,
+     "titleFr": "Existe-t-il des preuves de déversements, de fuites, de taches, etc., associées au RS entretenu par le propriétaire? Avez-vous saisi dans BORiS le déversement, la fuite, etc., associé(e) au(x) RS entretenu(s) par le propriétaire?",
+     "labelFr": "6.5. Déversements du RS du propriétaire",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "9e79e3ef-2987-4d2b-8c27-5407450737df",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 10,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "be600bca-8703-4716-8849-c7104deb66d4",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "5e415bf0-341e-45c2-9ce7-33a52eda3398",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "3c8d507c-6767-400c-9e84-122821f1c4e5",
+   "sequence": 7,
+   "title": "Chemical Storage",
+   "titleFr": "Entreposage de produits chimiques",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "3f81fdca-4282-4d41-a66b-25f9e7aef385",
+     "sequence": 0,
+     "title": "Did you observe, or are you aware of any other forms of chemical storage (i.e. drums/barrels, pails, etc.)?",
+     "label": "7.1 Chemical Storage",
+     "instructions": null,
+     "titleFr": "Avez-vous observé ou êtes-vous au courant d’autres formes de stockage de produits chimiques (p. ex., fûts, seaux, etc.)?",
+     "labelFr": "7.1. Entreposage de produits chimiques",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 5,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "7d55d2ba-f817-4aff-97ad-d4239624c7f4",
+       "type": "heading",
+       "title": "Confirm the status of chemical storage records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres d’entreposage de produits chimiques (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Containers",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Chemical_Storage/Containers"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "f663b8b8-8117-491f-b286-81ee2d3bfc65",
+     "sequence": 1,
+     "title": "Have all the chemical storage containers been entered into BORIS? (e.g. number of containers, contents, secondary containment, etc.) Did you enter this chemical storage information in BORIS?",
+     "label": "7.2 Chemical Storage",
+     "instructions": null,
+     "titleFr": "Tous les conteneurs de stockage de produits chimiques ont-ils été saisis dans BORiS (p. ex., nombre de conteneurs, contenu, confinement secondaire, etc.)? Avez-vous saisi ces renseignements sur le stockage des produits chimiques dans BORiS?",
+     "labelFr": "7.2. Entreposage de produits chimiques",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "3f81fdca-4282-4d41-a66b-25f9e7aef385",
+       "answer": "yes"
+      }
+     ],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "d8eb6f29-0fb9-4efc-b898-0439339a14e6",
+       "type": "heading",
+       "title": "Confirm the status of chemical storage records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres d’entreposage de produits chimiques (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Containers",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Chemical_Storage/Containers"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "84a2e741-2def-41e3-a5e6-2aaa5b512986",
+     "sequence": 2,
+     "title": "Is there any evidence of spills, leaks, staining, rusting etc. associated with your observations? Have you entered the spill, leak, etc. associated with the chemical storage in BORIS?",
+     "label": "7.3 Chemical Leaks/Spills",
+     "instructions": null,
+     "titleFr": "Vos observations énoncées ci-dessus comportent-elles des preuves de déversement, fuite, tache, rouille, etc.? Avez-vous saisi dans BORiS le déversement, la fuite, etc., associé(e) au stockage de produits chimiques?",
+     "labelFr": "7.3. Fuites et déversements de produits chimiques",
+     "instructionsFr": null,
+     "showWhen": [
+      {
+       "questionId": "3f81fdca-4282-4d41-a66b-25f9e7aef385",
+       "answer": "yes"
+      }
+     ],
+     "weights": [
+      {
+       "answer": "yes",
+       "weight": 15,
+       "title": "Risk Score"
+      }
+     ],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "e08d9c29-2e26-4537-bef8-22b3e76c4684",
+       "type": "heading",
+       "title": "Confirm the status of spill/incident records (Click here to update or create a new record).",
+       "titleFr": "Confirmez le statut des registres de déversements/incidents (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Spills or Incidents",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Spills_or_Incidents"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "22dbb325-0d2d-4992-938d-8f22dc414a76",
+       "type": "comments",
+       "title": "Please provide information regarding the nature of the spill/incident and the date that it occurred.",
+       "titleFr": "Veuillez fournir des renseignements sur la nature du déversement ou de l’incident et la date à laquelle il s’est produit.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "e272cffb-0e16-4c30-8a78-fba8c51abbe0",
+   "sequence": 8,
+   "title": "Adjacent/Surrounding Properties",
+   "titleFr": "Propriétés adjacentes/voisines",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "58df64ee-efae-4e0c-90d4-a88c0fbf9e82",
+     "sequence": 1,
+     "title": "Are there any issues of environmental concern identifiable on any adjacent properties? (e.g. ASTs, gas stations, paint shops, drycleaners, car repair shops, outdoor chemical drum storage, spills, dead grass, etc.)",
+     "label": "8.1 Adjacent Properties",
+     "instructions": null,
+     "titleFr": "Existe-t-il des problèmes environnementaux identifiables sur les propriétés adjacentes (p. ex., réservoirs de surface, stations-service, ateliers de peinture, nettoyeurs à sec, ateliers de réparation automobile, stockage extérieur de fûts de produits chimiques, déversements, herbes mortes, etc.)?",
+     "labelFr": "8.1. Propriétés adjacentes",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "89f14310-c1a2-4032-a5b0-13c19fbad6c8",
+       "type": "heading",
+       "title": "Confirm the status of Adjacent Property records (Click here to update or create a new record).",
+       "titleFr": "Confirmez l’état des registres relatifs aux propriétés adjacentes (cliquez ici pour mettre à jour ou créer un nouveau registre).",
+       "link": {
+        "label": "Surrounding Properties",
+        "parent": "Environmental Records",
+        "path": "/Environmental/Environmental_Records/Historical_Data/Surrounding_Properties"
+       },
+       "requiredWhen": "yes",
+       "required": false
+      },
+      {
+       "id": "00851f13-119e-4d46-be37-e3ee7f3ecf56",
+       "type": "comments",
+       "title": "Have all these issues been entered into BORIS? Please confirm you have updated the Surrounding Properties section of BORIS and provide any other additional comments.",
+       "titleFr": "Tous ces problèmes ont-ils été saisis dans BORiS? Veuillez confirmer que vous avez mis à jour la section Propriétés environnantes de BORiS et fournir tout autre commentaire.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  },
+  {
+   "id": "fc913c58-8499-4731-a89f-0943cfd0f84c",
+   "sequence": 9,
+   "title": "Other Environmental Concerns",
+   "titleFr": "Autres risques pour l’environnement",
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "9a74c857-b8af-42a6-a029-e01159423db6",
+     "sequence": 1,
+     "title": "Is there any rust, or visual damage on tenant owned Air Handling Units, air distribution, terminal systems, or central systems?",
+     "label": "9.1 Tenant Equipment",
+     "instructions": null,
+     "titleFr": "Y a-t-il de la rouille ou des dommages visibles sur les unités de traitement d’air appartenant aux locataires, les systèmes de distribution d’air, les systèmes terminaux ou les systèmes centraux?",
+     "labelFr": "9.1 Équipement des locataires",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "8db74ba5-55f4-43df-bd0e-d3a7591004be",
+       "type": "comments",
+       "title": "Please enter the date that the tenant was last informed of these issues",
+       "titleFr": "Veuillez indiquer la date à laquelle le locataire a été informé pour la dernière fois de ces problèmes.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "74d6dfe7-cf19-4dfb-bffa-70c1326b60d4",
+     "sequence": 2,
+     "title": "Did your property have a fire anytime in the last 12 months that required the use of a fire suppressant?",
+     "label": "9.2 Fire",
+     "instructions": null,
+     "titleFr": "Votre propriété a-t-elle subi un incendie au cours des 12 derniers mois ayant nécessité l’utilisation d’un agent extincteur?",
+     "labelFr": "9.2 Incendie",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [],
+     "correctiveActions": []
+    },
+    {
+     "id": "0f37a283-6324-4f24-ad2e-7f3a6ff6f8eb",
+     "sequence": 3,
+     "title": "Are there any other environmental concerns on-site?",
+     "label": "9.3 Other Concerns",
+     "instructions": null,
+     "titleFr": "Avez-vous constaté d’autres risques pour l’environnement sur les lieux?",
+     "labelFr": "9.1. Autres préoccupations",
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no"
+     ],
+     "followUps": [
+      {
+       "id": "3b4d984a-3ee7-49dc-9022-f57f0552d77e",
+       "type": "comments",
+       "title": "Please  provide any additional comments and contact the BentallGreenOak asset manager and analyst.",
+       "titleFr": "i.\tVeuillez fournir tout commentaire supplémentaire et communiquer avec le gestionnaire d’actifs et l’analyste de BGO.",
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  }
+ ]
+}

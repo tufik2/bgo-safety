@@ -1,0 +1,72 @@
+[
+ {
+  "id": "u14",
+  "firstName": "Caroline",
+  "lastName": "PM",
+  "email": "caroline+pm@refineddata.com",
+  "phone": "",
+  "title": "Property Manager",
+  "status": "Active",
+  "role": "Admin"
+ },
+ {
+  "id": "u15",
+  "firstName": "Caroline",
+  "lastName": "Asset",
+  "email": "caroline+am@refineddata.com",
+  "phone": "",
+  "title": "Asset Manager",
+  "status": "Active",
+  "role": "Admin"
+ },
+ {
+  "id": "u47",
+  "firstName": "Jessa",
+  "lastName": "OwnerPM",
+  "email": "jessa+seniorpm@refineddata.com",
+  "phone": "",
+  "title": "Senior Asset Manager",
+  "status": "Active",
+  "role": "Admin"
+ },
+ {
+  "id": "u48",
+  "firstName": "Jessa",
+  "lastName": "Molyneux",
+  "email": "jessa+propertymanager@refineddata.com",
+  "phone": "647-280-0457",
+  "title": "Property Manager",
+  "status": "Active",
+  "role": "Admin"
+ },
+ {
+  "id": "u134",
+  "firstName": "William",
+  "lastName": "Ren",
+  "email": "william.ren@refineddata.com",
+  "phone": "416-996-6517",
+  "title": "",
+  "status": "Active",
+  "role": "Admin"
+ },
+ {
+  "id": "u135",
+  "firstName": "Carl",
+  "lastName": "Paulse",
+  "email": "carl.paulse@refineddata.com",
+  "phone": "905-975-1247",
+  "title": "",
+  "status": "Active",
+  "role": "Admin"
+ },
+ {
+  "id": "u-2b458d9ae2e8",
+  "firstName": "Hugh",
+  "lastName": "Molyneux",
+  "email": "hugh@refineddata.com",
+  "phone": "",
+  "title": "",
+  "status": "Active",
+  "role": "Admin"
+ }
+]

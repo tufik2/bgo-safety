@@ -1,0 +1,2191 @@
+{
+ "id": "51de76ea-d70c-5ba6-af68-d0d2a4a7c837",
+ "module": "emergency",
+ "title": "Emergency Preparedness Inspection",
+ "group": "Emergency Preparedness",
+ "sourceModule": null,
+ "level": "Property",
+ "year": "2026",
+ "approvalRequired": true,
+ "showPhotosIcon": true,
+ "showAttachmentIcon": false,
+ "showCommentIcon": true,
+ "importedFrom": "scripts/build-emergency-checklist.py",
+ "categories": [
+  {
+   "id": "ebe088f8-4535-5f30-ae7f-19ad63f4e111",
+   "sequence": 0,
+   "title": "Emergency Response Plan",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "490942a4-6d72-5cb1-865a-95c14a7b0fc3",
+     "sequence": 0,
+     "title": "Is there a written Emergency Response Plan for the property, reviewed within the last 12 months?",
+     "label": null,
+     "instructions": "CSA Z1600. Separate from, and consistent with, the Fire Safety Plan.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "2b95fbd8-db44-5546-905a-1d31bedea2a8",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "9ac61aa1-9565-5c42-8524-88063590ed5d",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "dde8b3c3-87ee-50cf-a892-fe749f0b1a2b",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Review and update the Emergency Response Plan",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "32a09d0f-81eb-50bc-8cf6-0a40eaccb43c",
+     "sequence": 1,
+     "title": "Does the plan cover the hazards identified for this site (e.g. power outage, flood, gas leak, severe weather, medical emergency, bomb threat, violent incident, hazardous spill)?",
+     "label": null,
+     "instructions": "Based on a site hazard and risk assessment.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "6bc3acc6-09f7-5afe-a697-a6f49711494e",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "0374d4d6-dae9-5a54-8c7d-bff6917ff00c",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Complete a site hazard assessment and add missing scenarios to the plan",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "19ef6579-d23b-5707-b6dd-004876744ae8",
+     "sequence": 2,
+     "title": "Are emergency roles (incident lead, wardens, first aiders, building operator) assigned, with alternates for each?",
+     "label": null,
+     "instructions": "Names and contact numbers in the plan.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "087e1b96-99d4-5a9c-9374-5451647a10fd",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "4b3a04e6-8aa0-5dea-9c9f-9b1b7973448a",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Assign emergency roles and alternates; update the plan",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b0cf5988-aa95-553a-8733-de110a951e44",
+     "sequence": 3,
+     "title": "Is the plan available to building staff and tenant emergency contacts (printed copy on site and electronic copy)?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "34a2338e-7473-5e8b-abc1-defb0e2e9e5a",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "262cb9a2-1258-51f9-96b1-62fbf70c8b11",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Distribute the current plan to staff and tenant contacts",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e47ae1bb-2dbd-5252-877e-1e49afb23905",
+     "sequence": 4,
+     "title": "Have tenants’ own emergency procedures been collected and checked for consistency with the building plan?",
+     "label": null,
+     "instructions": "Especially for tenants with special hazards, large occupant loads or 24-hour operations.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "81cccfce-7979-5816-9070-69db79f62e41",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "b432b06d-57bc-5169-b8b8-078f4536f8d9",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Collect and review tenant emergency procedures",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2d90f82f-b848-547f-b8b4-6d11895637af",
+   "sequence": 1,
+   "title": "Emergency Contacts & Communication",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "4bffd6d4-44a4-5e93-a1cf-9e5e3a1b144c",
+     "sequence": 0,
+     "title": "Is the emergency contact list (fire, police, ambulance, utilities, elevator, restoration and alarm contractors, management) current, reviewed within the last 6 months?",
+     "label": null,
+     "instructions": "Post at the security or concierge desk and keep in the emergency kit.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e271845b-8a37-5429-8517-db11cba698ff",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "aaf96b2a-84e4-5fa5-afc8-f85a3b110998",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "a2786a36-57fe-59a1-a18e-2a5170ad3716",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Update and repost the emergency contact list",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ae6c29ae-7b4e-5fb0-a8f2-038a1e5ea4d8",
+     "sequence": 1,
+     "title": "Is the tenant emergency contact list current, including after-hours numbers?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "396272f1-3a66-52bf-85c8-208121c05885",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "95413e02-163c-5d11-b328-8028b549fd6a",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Update tenant emergency and after-hours contacts",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "526f1f2f-2929-59ec-a00e-c905cdab068c",
+     "sequence": 2,
+     "title": "Can occupants be notified of an emergency (voice paging, mass notification or another reliable method), and was it tested within the last 12 months?",
+     "label": null,
+     "instructions": "Voice communication is part of the fire alarm in many high-rises (CAN/ULC-S524 / S536).",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b0519470-bf3f-5212-bcbb-5d02509056cd",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "2b4f5a95-a29c-51a1-846b-aa0485625016",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "bf704a4a-e89b-5c7d-b42b-cc8c51df9a7d",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Test or set up occupant notification and record the result",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c71ab2fb-4678-5301-832c-dd8464e26961",
+     "sequence": 3,
+     "title": "Is there a documented escalation process for notifying senior management, ownership and insurers?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "1d2fa05f-8adc-5c8c-ab1f-a2c12c30f160",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "6de14f25-e7ca-56a1-9c79-5f43be59fb68",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Document the incident escalation and notification process",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "1da1a0d5-94f7-50e5-b9a6-09f45655fbf7",
+   "sequence": 2,
+   "title": "Evacuation, Shelter & Accountability",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "8c547ee4-4686-56ad-aa05-d4bef4cfc22b",
+     "sequence": 0,
+     "title": "Are assembly points designated, marked and known to occupants, with a backup location?",
+     "label": null,
+     "instructions": "Away from the building, fire department access and traffic.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d793fec3-fd07-58b8-a9d6-abe2671cf733",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "db8d72b0-2655-5026-9db4-e6f1fd43a039",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Designate, sign and communicate assembly points",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c98089a0-e721-5ecd-9423-b6e7188ddfaf",
+     "sequence": 1,
+     "title": "Is there a procedure to account for occupants after an evacuation (warden sweeps and reports)?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b237cc98-e46e-5a3b-8312-37fb147fc9f9",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "d8d61d25-b7b5-544d-851b-960bd3a305a8",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Add an occupant accountability procedure and brief wardens",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "487ce123-d09d-506a-a992-31c199680315",
+     "sequence": 2,
+     "title": "Is there a shelter-in-place procedure (for outdoor hazards such as chemical releases or severe weather), including how to shut down air handling?",
+     "label": null,
+     "instructions": "CSA Z1600.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "179fad58-a6e1-5b97-a348-df2cd19be72f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "ad1f57b6-14da-58c6-9cc7-8a5710f079c3",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Write a shelter-in-place procedure, including HVAC shutdown steps",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8c0d834d-5594-5e20-a4bf-15ace62b9ebc",
+     "sequence": 3,
+     "title": "Are there procedures for occupants who need help to evacuate, with evacuation aids (e.g. evacuation chairs) available and staff trained?",
+     "label": null,
+     "instructions": "NFC 2.8.2. Answer N/A for single-storey buildings with level exits.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "eefab131-d4d7-5903-92d2-d8fd1e344ef0",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "435b8e13-84d9-5ecb-bb85-e8e4c6804d72",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Provide evacuation aids and train staff in assisted evacuation",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "48a130c5-cfef-5743-afd9-66636d47bb0d",
+   "sequence": 3,
+   "title": "Training & Exercises",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "78569f17-a9c5-53a7-8c35-729c58aa438e",
+     "sequence": 0,
+     "title": "Has an exercise of a non-fire scenario (e.g. tabletop, shelter-in-place or power outage) been held within the last 12 months?",
+     "label": null,
+     "instructions": "Fire drills are covered in the Fire & Life Safety Inspection. CSA Z1600 exercise program.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b917b6a5-fad4-5769-8ff4-5b8b87ae47b5",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "bbd8c144-dc00-518f-9c91-6fa109188592",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "3a13131d-e80f-5be1-b081-cce35b92d5a6",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Plan and hold an emergency exercise; record lessons learned",
+       "due": {
+        "amount": 2,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bc51f4b2-875a-50d2-8318-5eed429c19ac",
+     "sequence": 1,
+     "title": "Have building staff and the emergency team been trained on the Emergency Response Plan within the last 12 months?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "1536ee94-051b-568b-8e57-db1b577d2577",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "b6d4ff4c-9e10-5a08-9ac4-db60a293b065",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Train staff and the emergency team on the plan",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "88604457-db6f-54d8-93d1-c54331053c58",
+     "sequence": 2,
+     "title": "Were tenants briefed on emergency procedures within the last 12 months?",
+     "label": null,
+     "instructions": "E.g. an annual tenant emergency meeting or bulletin.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "db3d4253-9238-53e4-83e7-30b4cd90d101",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "d87d00e1-4a7e-5020-82da-e58e0d0608a5",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Hold or send an annual tenant emergency briefing",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "0025e7b1-1f28-53a9-a677-62bdf447caf0",
+     "sequence": 3,
+     "title": "Have corrective actions from the last exercise or real incident been completed?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d788fd16-843f-5de0-9033-a94b228d273f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "064a9a62-325c-542a-af54-84ba16fbf999",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Complete outstanding actions from the last exercise or incident",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d168b8a2-63d5-52f9-8ed5-c6dadec5baeb",
+   "sequence": 4,
+   "title": "First Aid & Medical Emergencies",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "dd520f40-7567-5b0e-ad42-1b08a76caec8",
+     "sequence": 0,
+     "title": "Are first aid kits provided as required by provincial regulation, fully stocked and inspected?",
+     "label": null,
+     "instructions": "CSA Z1220 / provincial first aid regulations (e.g. Ontario Reg. 1101, Alberta OHS Code Part 11).",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "672ff8c6-1691-5ac6-87fd-e68210a453dc",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "eecc256d-12ac-56a9-8d9a-eb103c8046d4",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Restock first aid kits and record the inspection",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1633aee2-45c6-5144-b743-89f6ef48d305",
+     "sequence": 1,
+     "title": "Is a trained first aider available on site during operating hours, as required by provincial regulation?",
+     "label": null,
+     "instructions": "Keep training certificates on file.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "beb55084-8384-5b98-af49-ee0f95554adc",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "a75f67a9-81d9-59e2-a260-076f5f72e386",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Train or designate additional first aiders",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "48393ac0-2cc4-5648-bfa0-d5663eb1f10c",
+     "sequence": 2,
+     "title": "Is an AED on site, signed, accessible, checked monthly, with pads and battery within their expiry dates?",
+     "label": null,
+     "instructions": "Manufacturer instructions; register with local EMS where a program exists. Answer N/A if no AED.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e53e51b6-12b5-5ce6-a8b4-2209f62de4fc",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "3e4609bf-247b-58c4-87db-02d94f09d980",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Service the AED and replace expired pads or battery",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bd730c56-c28e-5e6e-b93e-bba7f9e0ea5d",
+     "sequence": 3,
+     "title": "Where hazardous chemicals are used, are eyewash stations or showers provided, unobstructed and activated weekly?",
+     "label": null,
+     "instructions": "ANSI/ISEA Z358.1. Answer N/A if not required.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d30a2561-31de-5de5-961a-aa40b5d36515",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "573538c3-fce2-5f5a-9c0f-0c8a1a9483fd",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Install, repair or resume weekly testing of eyewash stations",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "605c79d8-28e5-50e8-989f-c481e0ad067e",
+   "sequence": 5,
+   "title": "Utilities & Building Systems",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "7abf1a70-4b4d-58c2-828e-ada95ea850b5",
+     "sequence": 0,
+     "title": "Are shut-offs for gas, water and electricity identified, labelled, accessible and shown on site plans?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "6919a349-eeb4-5fd8-a52b-e01d38e7a25f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "9ee91216-be97-5c67-b1b8-69896a73129f",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Label utility shut-offs and add them to site plans",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b7085520-ac4e-5484-ab34-5aa183edae19",
+     "sequence": 1,
+     "title": "Are written shutdown and restart procedures available for critical building systems?",
+     "label": null,
+     "instructions": "Kept with the building operator and in the emergency kit.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "aacf9d01-990c-5c1b-be45-2a310d5a709d",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "81432809-c0ed-5db3-be95-30d1e74783ea",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Write shutdown and restart procedures for critical systems",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "45a5de8d-f8e3-5007-a6a3-c6a9af44c738",
+     "sequence": 2,
+     "title": "Is there an elevator entrapment procedure, with the 24-hour elevator contractor number posted?",
+     "label": null,
+     "instructions": "CSA B44. Answer N/A if no elevators.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d038f029-d71d-55eb-8587-b63a75e8a81b",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "9b1d98ad-f9e1-5d7d-a986-155bdeff4deb",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Post the elevator contractor number and write an entrapment procedure",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "df01e745-cc42-52d3-8e7a-bf5d2870b0f1",
+     "sequence": 3,
+     "title": "Is there a procedure for power outages, including which systems run on emergency power and how long?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "ea8041b2-2420-53d5-b464-89c68c085fa8",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "d9363b82-73e9-5fab-848f-3c97f7eba29d",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Document the power outage procedure and emergency power loads",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "9625c4f1-861a-56af-addc-093fe7b1fd92",
+     "sequence": 4,
+     "title": "Is there a water leak and flood procedure, with leak detection and sump pumps (if any) tested within the last 12 months?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "7595f947-066a-5e65-9af2-f3d6ce4da117",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "85156ef2-5c3c-58aa-96d8-d213448399c1",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Write a flood procedure and test sump pumps and leak detection",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "39ddb30d-bb3f-5e0d-9fbb-d180acc780d0",
+   "sequence": 6,
+   "title": "Severe Weather & Natural Hazards",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "f2f7a318-96f7-5124-a13c-206c6c3ca7a3",
+     "sequence": 0,
+     "title": "Is there a severe weather procedure (snow and ice, high winds, extreme heat or cold, flooding), with weather alerts monitored?",
+     "label": null,
+     "instructions": "Environment and Climate Change Canada alerts.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "57950002-2113-5d3a-876f-6fe2e8a2d6e7",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "edb58f0a-d429-5226-b22e-5bdfd5de9b71",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Write a severe weather procedure and set up alert monitoring",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6a34902b-8182-59e3-bda2-fa847aafbb35",
+     "sequence": 1,
+     "title": "Are roofs, drains and catch basins inspected before winter and spring thaw?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "54eff4e7-1753-57fb-ad7d-493a2de5c818",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "c18903e3-6e69-5bc9-82d1-f6168c2ad88d",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Inspect roofs, drains and catch basins",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c7e0ee10-c039-5c60-800a-a1b477c573fd",
+     "sequence": 2,
+     "title": "Where earthquakes are a risk, are earthquake procedures in place and heavy items secured?",
+     "label": null,
+     "instructions": "Mainly British Columbia and parts of Québec. Answer N/A elsewhere.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "4f3bb490-b1d3-5478-8c95-e6464c3d5eb2",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "7ad52406-1524-58a9-b450-c59e0af3b9c1",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Add earthquake procedures and secure heavy items",
+       "due": {
+        "amount": 2,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e9de43d8-e7c7-50c0-867f-b2051bb5942e",
+   "sequence": 7,
+   "title": "Security & Threats",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "cf89061e-e627-5796-9f55-cbd949cf550b",
+     "sequence": 0,
+     "title": "Is there a bomb threat procedure, with a call checklist at reception or security?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "7e520ac3-d14b-5b0c-bdf7-c252fe9efab0",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "dad868eb-8d2c-5dea-b5da-c5796c76faa3",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Add a bomb threat procedure and call checklist",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "928c682b-14fb-5642-a2c8-2903c0f149a1",
+     "sequence": 1,
+     "title": "Is there a procedure for a violent incident (lockdown or hold-and-secure), communicated to staff and tenants?",
+     "label": null,
+     "instructions": "Coordinate with local police guidance.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "17500a49-d943-5e31-9a12-b0277f31bb44",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "bcbf3618-0d67-55c9-91c0-d79966a7cc63",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Write and communicate a lockdown or hold-and-secure procedure",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d51b7dbe-8197-55c7-96c8-218fb2240a7f",
+     "sequence": 2,
+     "title": "Is there a procedure for suspicious packages and mail?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "fb4bc73b-3be0-5c82-8de5-28813979efdb",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "de65d04b-95d6-5397-8027-a461362c3135",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Add a suspicious package procedure",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b34cbd96-6695-523b-aca5-cc7345b6e732",
+     "sequence": 3,
+     "title": "Do access control and after-hours security procedures work as intended (doors secure, cards and keys controlled)?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "5391297f-9fef-51f1-b88a-ceb9e6cd9842",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "14baf363-8536-54f3-9ce2-691f12137cb3",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Fix access control issues and update the key and card register",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "bbc24b23-1f48-59a0-bd3f-323a266379c8",
+   "sequence": 8,
+   "title": "Hazardous Materials & Spills",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "4f7f8215-c1d7-5cb9-a72f-0071442bdc6a",
+     "sequence": 0,
+     "title": "Are spill kits available where fuels, oils or chemicals are stored or used, and fully stocked?",
+     "label": null,
+     "instructions": "Answer N/A if none are stored.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e9715017-8741-511e-a4b1-b9dbbb7306f0",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "eb619ee2-a573-5254-b998-c794ff5f9243",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Provide or restock spill kits",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "a4d45f15-dac7-555d-87b5-9ddf75029490",
+     "sequence": 1,
+     "title": "Are up-to-date Safety Data Sheets available for hazardous products on site?",
+     "label": null,
+     "instructions": "WHMIS 2015 / Hazardous Products Regulations.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "50b42884-4a77-5c63-9ef6-d829774e38ae",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "5cfdc6b3-57dc-5e51-8fbe-a851e0d2738f",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Update Safety Data Sheets for products on site",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "46d072c2-cfe2-5e7b-817b-abec6445597e",
+     "sequence": 2,
+     "title": "Is there a spill reporting procedure, including when to notify the provincial environment ministry?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d7de1f64-bcab-5dd4-b218-98562d8778a2",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "20ff59f8-0d7c-52af-8ff9-c24f141bb20e",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Write a spill response and reporting procedure",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5f931120-d429-5298-955f-19b575db2acc",
+   "sequence": 9,
+   "title": "Emergency Supplies & Equipment",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "86c0b95f-2e8a-5d46-b493-15586c693ea1",
+     "sequence": 0,
+     "title": "Is there an emergency kit with the plan, contact lists, floor plans, master keys and flashlights, checked within the last 6 months?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "dbe17cb6-5a84-53b7-98fa-46d91aacf18d",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "7c3b78a0-3260-557a-a7ae-6bfa9fda6606",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Assemble or restock the emergency kit",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8d074a45-54f8-5d36-b749-3cc546955795",
+     "sequence": 1,
+     "title": "Do wardens have identification (vests or hats), flashlights and a means to communicate (radios or phones)?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d8c1e1f1-1edf-5df7-ace8-afcd0c2c8f59",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "bfc84035-971b-5597-acc9-0ab24278d7bc",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Supply warden vests, flashlights and radios",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e6e8dd47-af1a-593d-a065-461c9e49a3c1",
+   "sequence": 10,
+   "title": "Business Continuity & Recovery",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "7df177ef-ca31-5d17-b8e8-6c9a67676ba3",
+     "sequence": 0,
+     "title": "Are restoration, emergency repair and security contractors pre-arranged (agreements or approved vendor list)?",
+     "label": null,
+     "instructions": "CSA Z1600 continuity planning.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "19f038c2-adb5-5e89-aa15-c05d29df7f5c",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "0f6bcb10-1c7a-580b-8be2-37d33168ee32",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Set up emergency service agreements with restoration and repair contractors",
+       "due": {
+        "amount": 2,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5778b13e-c01d-56a5-9e51-113b51225f7c",
+     "sequence": 1,
+     "title": "Are critical building records (drawings, as-builts, leases, contacts) backed up off site or online?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "69da46d5-3d1f-5b1c-9ee4-e90f46a7c70d",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "dffbe36f-06b6-575d-88c6-67bc385f1e31",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Back up critical building records off site",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e437c83b-5ee5-556f-8903-4f45a986fa54",
+     "sequence": 2,
+     "title": "Is there a post-incident review procedure to record what happened and the follow-up actions?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "dddcd21d-9d58-5459-95a5-45840ebc5aca",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "21771b2d-35be-5b8d-9a98-fcc28c02308c",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Add a post-incident review procedure",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Emergency Preparedness"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "52ad74be-cabf-5eef-80d3-eb2a0244e4fe",
+   "sequence": 11,
+   "title": "Review and Approvals",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "8b159331-e19e-5c41-8fa1-dd9e283bf765",
+     "sequence": 0,
+     "title": "Assessors",
+     "label": null,
+     "instructions": null,
+     "required": false,
+     "answers": [],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [],
+     "followUps": [
+      {
+       "id": "cdd3d698-f373-5e17-ace9-f8d265be5c3c",
+       "type": "text",
+       "title": "Assessor Name",
+       "requiredWhen": "always",
+       "required": true
+      },
+      {
+       "id": "56cb8fd6-5d8c-56c8-b8ac-01ff339760e7",
+       "type": "signature",
+       "title": "Signature of Assessor",
+       "requiredWhen": "always",
+       "required": true
+      },
+      {
+       "id": "f952a043-ced6-5f9c-a4f2-b83aeb36e4f5",
+       "type": "text",
+       "title": "Second Assessor Name",
+       "requiredWhen": "always",
+       "required": false
+      },
+      {
+       "id": "3ee2d89f-cb71-519b-b02a-846ee6977be4",
+       "type": "signature",
+       "title": "Signature of Second Assessor",
+       "requiredWhen": "always",
+       "required": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

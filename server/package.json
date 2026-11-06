@@ -1,0 +1,30 @@
+{
+  "name": "bgo-safety-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "BGO Safety serverless API (AWS Lambda + API Gateway + DynamoDB + S3)",
+  "scripts": {
+    "dev": "node scripts/dev-server.mjs",
+    "test": "node scripts/smoke-test.mjs",
+    "load-data": "node scripts/load-data.mjs",
+    "sync-checklists": "node scripts/sync-checklists.mjs",
+    "import-lists": "node scripts/import-lists.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.600.0",
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@aws-sdk/client-secrets-manager": "^3.600.0",
+    "@aws-sdk/client-sesv2": "^3.600.0",
+    "@aws-sdk/client-sns": "^3.600.0",
+    "@aws-sdk/lib-dynamodb": "^3.600.0",
+    "@aws-sdk/s3-request-presigner": "^3.600.0",
+    "pdf-lib": "^1.17.1"
+  },
+  "devDependencies": {
+    "exceljs": "^4.4.0"
+  }
+}

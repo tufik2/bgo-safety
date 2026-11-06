@@ -1,0 +1,3243 @@
+{
+ "id": "3b679b5d-718d-4aec-976f-82cf4eb765b8",
+ "module": "fire",
+ "title": "Workplace Hazard Inspection",
+ "group": "Workplace Hazard Assessment",
+ "sourceModule": "OHS",
+ "level": "PROPERTY",
+ "year": "2025",
+ "approvalRequired": true,
+ "showPhotosIcon": true,
+ "showAttachmentIcon": true,
+ "showCommentIcon": true,
+ "importedFrom": "source-workplace-hazard-inspection.xml",
+ "categories": [
+  {
+   "id": "fc915056-abef-4acc-bb4f-dae845c69e5e",
+   "sequence": 1,
+   "title": "Occupational Health & Safety",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "3df634d8-27ff-4899-9c4b-8b7aeae795d4",
+     "sequence": 1,
+     "title": "Is the BGO OHS Policy posted and accessible to all employees?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "970d5222-d3ac-4c1d-ba4f-5c9cca2319b3",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "787b1860-caf7-4ece-a6a6-69ef02fab257",
+     "sequence": 2,
+     "title": "Is the BGO OHS Manual and Procedures accessible to all employees?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "1e25a8b6-c0d1-4d76-916f-4b7198087029",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "8844dfdd-8ce4-4137-991a-34397d37b644",
+     "sequence": 3,
+     "title": "Is the information on the OHS Bulletin Board current and complete?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "96cff5f1-8649-44cf-921d-c85faced8b5c",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "8e84c789-69b8-4a1d-974e-de3c68ea94db",
+     "sequence": 4,
+     "title": "If you have a Joint Health and Safety Committee (JHSC), are the most recent meeting minutes posted?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "7df21c07-4788-43e4-9156-9ed34baf204c",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "e5af7d2f-6396-47cd-8b85-b98da8cbdefc",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "na",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Post most recent JHSC meeting minutes",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "768273fc-8b36-4cb2-84fa-9f2c641037de",
+   "sequence": 2,
+   "title": "Trip / Fall",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "83da3eb4-2be3-4919-91fb-f7fa7b3153af",
+     "sequence": 0,
+     "title": "Is there any loose material, debris, worn carpeting etc.?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "1e085432-2cc0-45fe-a1c7-c93ff9934759",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Fix loose material/debris/worn carpeting",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "672d4889-fd41-49d5-9c2a-fdfd9490009c",
+     "sequence": 1,
+     "title": "Is the floor slippery, oily or wet ?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "3536e6d3-80fe-4fce-bf3c-46d8462dd8eb",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Floors need to be dry and signs posted",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1bc5943e-0bd7-4f5a-9bd0-854d8ef1f293",
+     "sequence": 2,
+     "title": "Are there any areas that are improperly lit, has uneven surfaces, has exposed cables / cords etc.?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "879c5066-d65b-47ed-a5ee-362ea398c422",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Fix issues with improper lighting, uneven surfaces and/or exposed cables/cords",
+       "due": {
+        "amount": 2,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3b9fe6eb-896e-4505-98e8-8f4f63417606",
+   "sequence": 3,
+   "title": "Hazardous Materials",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "a29f2642-5539-4e6b-b422-44771c3ef674",
+     "sequence": 1,
+     "title": "Are all hazardous materials (i.e., flammable, explosive, acidic, caustic, toxic etc.) properly stored, if any?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "82672fc4-9b33-48b9-9103-279b9b8be78a",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Properly store all hazardous materials (i.e., flammable, explosive, acidic, caustic, toxic etc.)",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "79443511-697c-4a1b-b3ab-1853e30ccbb7",
+     "sequence": 2,
+     "title": "Are all hazardous materials, if any, appropriately labelled?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b040368f-c73c-4759-a19f-f684ef9e145a",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Make sure all hazardous materials are properly labelled",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "87769754-4a76-4d14-935b-8c5ed7a1f6a9",
+     "sequence": 3,
+     "title": "Are all hazardous materials  separated by chemical compatibility?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Separate hazardous material by chemical compatibility",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ffec9a27-500e-494f-8a79-a38b079c2ad4",
+     "sequence": 4,
+     "title": "Are all hazardous materials properly maintained (i.e. management plan)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e4cc1bde-ea99-4931-b595-b9a3aaa7f969",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Implement a hazardous material management plan",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "65df1ef4-acd2-4f08-87eb-07e632773af9",
+     "sequence": 5,
+     "title": "Is there any equipment that contains ODSs? Are they maintained and in good condition?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "fbfffc57-94b0-4491-acc0-d2242c4f2dfc",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Make sure all equipment containing ODS's is maintained and in good condition",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "271b4d7e-ccee-4d76-a0d8-30fef86246f1",
+     "sequence": 6,
+     "title": "Are current MSDS available?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "499de3bc-c089-4e17-8daf-cb53cd345ec9",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Make sure all MSDS's are current",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "97fa60d8-1e24-4a8d-86c5-32f593a8e385",
+     "sequence": 7,
+     "title": "If a Spill Kit is available, is it within the vicinity (if applicable) of chemical storage areas?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "999744db-3540-41eb-b742-d89c6030ef1d",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Move spill kit to vicinity of chemical storage areas",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fc2f852b-5c8a-49c6-9204-cb1c848968a4",
+     "sequence": 8,
+     "title": "Are the contents of the Spill Kit adequately maintained?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b8bd00d7-63a2-4df7-8dcd-b5d9b9d793a8",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Update contents of Spill Kit",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "92a56634-0be8-489e-b728-d279a6f4b1de",
+     "sequence": 9,
+     "title": "Are the hazardous waste materials disposed of properly?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "74575da8-ff58-466a-b00c-c1dbe09f9afe",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Dispose of all hazardous waste materials properly",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d10f0dc7-1a4b-4b18-8e1e-80496b556eec",
+     "sequence": 10,
+     "title": "Has any mould been identified?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "0f564c9c-41cf-4a39-9ab2-e8e91f00c618",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Take steps to record and address mould",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b4461247-93e7-4837-a6a0-7c7815c10426",
+     "sequence": 11,
+     "title": "Have any sources of water penetration been identified (resulting in a potential for mould)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "09d400cf-ee04-4799-86da-5f396f01b0d0",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Address sources of water penetration to prevent mould",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "Property Managers",
+        "User 115"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d3d01531-8094-4685-b0e8-c22a3133fb0b",
+     "sequence": 12,
+     "title": "Has an annual IAQ investigation been conducted (if applicable)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "34e3d5b8-20b6-4086-8ee2-2b7864faca68",
+       "type": "text",
+       "title": "Is it required?",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Conduct annual IAQ investigation",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "98259190-fb7c-488f-b4cc-5234b6bc02bd",
+   "sequence": 4,
+   "title": "First Aid",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "91e7859d-34a5-4f40-8c82-8146f58fde04",
+     "sequence": 0,
+     "title": "Are local emergency services contact information posted?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "8c93fa87-55ca-4967-acaa-b5a2c2b18082",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Post emergency contact information",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "Property Managers",
+        "User 115",
+        "CAN Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "69e4b017-86d4-4ac9-b221-ebbb31222b2b",
+     "sequence": 1,
+     "title": "Are First Aid materials made available and accessible?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Make First Aid materials available",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "46d529c9-9d66-4921-9cdb-50351462b044",
+     "sequence": 2,
+     "title": "Are there sufficient quantities and types of First Aid kits on site?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "5e94b09b-b2fc-4b68-98b5-47dc553d0e4a",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Obtain sufficient number of First Aid kits",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c7b61e24-3124-4956-ab82-82dafed25512",
+     "sequence": 3,
+     "title": "Is someone tasked with inspecting and restocking kits as required?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "f428c4e9-f4a9-4f28-9ab4-8f2862bf3931",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Task someone with inspection and restocking First Aid kits (per requirement)",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "896709f2-23d7-49a4-8ff8-9e3ce36bf99d",
+     "sequence": 4,
+     "title": "Are there an adequate number of eye wash stations installed (if required)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "37fc8399-b5b0-4e59-9bee-720cbdc27b94",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Install sufficient number of eye wash stations (as required)",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "a94eb1a6-103e-442b-ac2c-a534c9cfc0bc",
+     "sequence": 5,
+     "title": "Is there an emergency shower available (if required)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b5b0a298-f6e6-400e-8d44-c2723a841b8b",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Install emergency shower as required",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "bc7b1a45-a7c6-4a11-85ac-df532a17c5e8",
+     "sequence": 6,
+     "title": "Is there an Automated External Defibrillators (AED) on site (if required)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e1680da5-2c5f-4e9e-929b-ae2f60cfbe12",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Install Automated External Defibrillator (AED) as required",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e70987e9-b671-4000-9f3f-3b5789390dc0",
+   "sequence": 5,
+   "title": "Worker / Visitor Safety",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "7b214cd3-5a94-4c24-b085-c98f9daedf8a",
+     "sequence": 0,
+     "title": "Are all guarding and safety screens installed on equipment where required?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "c01fcc40-8e8c-4aa3-a733-81bb19620687",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Install guarding and safety screens on equipment as required",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "34663b09-be2c-46ff-8e76-e9d5915edc36",
+     "sequence": 1,
+     "title": "Is a Self Contained Breathing Apparatus (SCBA) used?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "6550e50c-cee9-4b2c-89d9-57272a7898a1",
+       "type": "comments",
+       "title": "Hazard Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Maintain SCBA as required",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "0ecc0c86-0c52-4e52-a987-cfb5a5cf88bf",
+     "sequence": 2,
+     "title": "Is there,  or has there been, any threatening behaviour, harassment, verbal abuse or physical attack at the property?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e186eaa2-3ec0-4bd1-bac4-0efad919c71a",
+       "type": "comments",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Investigate and address threatening behaviour/harassment/verbal or physical abuse and/or attacks",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7efda555-65d8-4685-8b14-a1d7a02c5ab1",
+     "sequence": 3,
+     "title": "Are there any work situations that could put the life, health or safety of any persons directly in danger?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b4cc4e6b-0a87-4c4a-b2c6-4dc814bce01f",
+       "type": "text",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Investigate and address situations that are life-threatening and/or putting someone in danger",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "5d4a3fdd-6b86-4dc2-b5c0-3758ee3220fb",
+     "sequence": 4,
+     "title": "Are there any situations identified where employees may be working alone?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "db8e6965-0552-4e55-b3cf-7bd6c7dc3d82",
+       "type": "comments",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Address situation where employee(s) may be working alone",
+       "due": {
+        "amount": 3,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "11f26354-7e58-4079-82a6-324906534c73",
+     "sequence": 5,
+     "title": "Are  any locks, door alarms, security cameras, etc. broken or in need of repair?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "2d335aa2-b284-4233-9f15-07a0a745953a",
+       "type": "text",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Repair needed for locks / door alarms / security Camera etc",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "38ad2a47-1a97-4ddc-97c5-ea2e4fecc850",
+     "sequence": 6,
+     "title": "Does all applicable equipment (electrical, mechanical, piping systems etc.) have Lock Out / Tag Out capabilities?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "4b1d35c7-c3f6-4328-8d31-7854eff3d9e1",
+       "type": "comments",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure all applicable equipment has Lock Out / Tag Out capabilities",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2c1fd914-68f6-4c64-b7f0-267eaf0d62ae",
+     "sequence": 7,
+     "title": "Are there any hazardous materials and specific precautions to be made in accordance with  regulatory requirements (ie. asbestos)?",
+     "label": null,
+     "instructions": "Refer to appropriate policy for environmental hazards.",
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "a2748190-68d5-43fe-a323-50552514ab34",
+       "type": "text",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Make the necessary precautions in accordance with regulatory requirements",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "8741c46e-9535-4e4a-abc1-a929fd91c50e",
+   "sequence": 6,
+   "title": "Office Safety",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "34540647-41cc-4b83-9255-bfb8b21b5697",
+     "sequence": 0,
+     "title": "Is an emergency escape route and plan posted?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "afe687e1-35f0-460f-aa74-890f7196fcd3",
+       "type": "text",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Post emergency escape route",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "f12fec50-0f58-4106-8d1d-26ca2f03678e",
+     "sequence": 1,
+     "title": "Are all handrails secure?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "eae88c44-1593-4af4-b892-5c832f8593c5",
+       "type": "comments",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Secure handrails",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "75922a9f-3746-48de-bc51-6887e724c845",
+     "sequence": 2,
+     "title": "Are all stairwells free of obstructions?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "4fadde47-f89f-4d83-a9d1-33ce0c373892",
+       "type": "comments",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Free stairwells of obstructions",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "df86453f-0ec0-40e3-adf0-0d252d3b7209",
+     "sequence": 3,
+     "title": "Are all areas are adequately lit?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "2e0154f1-91b5-4c04-92a5-63acd1f8f748",
+       "type": "comments",
+       "title": "Hazards Controls",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure areas all adequately lit",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "454e5bce-6e63-4cf3-87f0-3487f984adcd",
+     "sequence": 4,
+     "title": "Is there an emergency lighting system, and is it regularly maintained?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "1e7a0817-b01f-4708-bd52-1fd0316c01dd",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Maintain emergency lighting system",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "0f3b87fc-764c-436e-85b2-58cb4913e4a6",
+     "sequence": 5,
+     "title": "Are all illuminated signs and notices at exits in working order?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Fix illuminated signs and notices at exit signs",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "02eb16e5-d9b9-45e3-a582-e55ce58708a7",
+   "sequence": 7,
+   "title": "Noise / Personal Protection Equipment (PPE) / Hand Tools",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "17c38c0f-9018-49bb-a9b5-e0bdb7c1004f",
+     "sequence": 0,
+     "title": "Are all tools used by employees in good working order?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "b195be5a-ed7f-4b29-94b7-b56c783a22e4",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Replace or repair all fall tools",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fe2dd162-ad37-40c1-987e-8260d8525ba6",
+     "sequence": 1,
+     "title": "Are proper PPE supplies (gloves, ear plugs, aprons, hard hats, safety glasses, respirators, gas masks, etc.) provided?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e317bfcd-2025-4938-b90e-1f8783774734",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Make sure proper PPE supplies are provided",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8971b6e2-7814-416e-84d3-756ce0c4432d",
+     "sequence": 2,
+     "title": "if PPE is provided, is it in good condition?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "40501760-a071-46ae-b731-1c3440a15419",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure all PPE is in good condition",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "52202f8f-aef9-4934-b0c2-75cc5ad0058a",
+     "sequence": 3,
+     "title": "Has a Noise Audit has been conducted (if applicable)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "1ab40294-7540-42ef-8779-b763b6a3a87e",
+       "type": "comments",
+       "title": "Is there one scheduled?",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Conduct a Noise Audit",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "2b72b102-27b2-4687-8a10-961cab149407",
+   "sequence": 8,
+   "title": "Ladder / Scaffolds / Railings / Rooftops",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "6ece56b4-b37f-4aa0-a58a-8affdd344c2d",
+     "sequence": 1,
+     "title": "Are proper ladders available for its specific use and in good working order?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "ecd971e1-0b42-4560-9402-e2316b82b313",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Make sure property ladder is available and in good working order",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "4de32767-fe64-4c2f-b8f0-09649a02a857",
+     "sequence": 2,
+     "title": "Is roof access is locked and if so, is proper signage is used?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "4ea2f86b-b143-4bbd-a3a8-d190c7eebabf",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure proper signage for roof access",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b0f1bd24-60c5-4c48-a48f-97e292d4d011",
+     "sequence": 3,
+     "title": "Are the roof tie-off equipment certified?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "8596f8f3-22bd-461e-af12-89f545e9e741",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Certify rood tie-off equipment",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "Property Managers",
+        "User 115"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "048edbb5-f25a-4a61-99ef-79406dd558d1",
+     "sequence": 4,
+     "title": "Is roof access log book kept on site and accessible?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "2a9e845c-b48b-440a-931c-f1cda3453974",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Keep roof access log book on site and accessible",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "725158bc-6831-452f-a4a1-88333f93c2f5",
+   "sequence": 9,
+   "title": "Material Handling",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "c4d386a3-5997-4488-bebd-92bcc0dfe757",
+     "sequence": 1,
+     "title": "Are there adequate clearance for material handling?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "09cb022a-a3bf-4f2f-a15a-c1e99479723c",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure adequate clearance for material handling",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fd919552-458e-42a7-a5f8-4c19e1a35c8a",
+     "sequence": 2,
+     "title": "Are all materials neatly and safely stored?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "7047d4c9-9041-431e-bb81-a084b9b5364b",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Make sure all materials are neatly and safely stored",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "1f620e0d-38ca-41f6-b9e8-d56ddfcecad4",
+     "sequence": 3,
+     "title": "Are any storage shelves overloaded or beyond their rated capacity?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "abcd82b4-2261-4881-9b3d-4597a7df6329",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": null,
+       "due": null,
+       "createTask": false,
+       "assignedTo": [],
+       "taskTypes": []
+      },
+      {
+       "answer": "no",
+       "nonCompliant": false,
+       "taskTitle": "Make sure all storage shelves are not overloaded or beyond their rated capacity",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "01dd8509-569b-4b0c-a68a-10f95cf44a9f",
+     "sequence": 4,
+     "title": "Are large and heavy objects stored on the ground or lower shelves?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "f31549da-1a4a-481e-a54f-74ad37d879c3",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": null,
+       "due": null,
+       "createTask": false,
+       "assignedTo": [],
+       "taskTypes": []
+      },
+      {
+       "answer": "no",
+       "nonCompliant": false,
+       "taskTitle": "Move all large and heavy objects to the ground or lower shelves",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "eddc838f-b72a-4801-8225-2e2d5b498b7a",
+   "sequence": 10,
+   "title": "Electrical Safety / Lockout Tagout",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "297a1a7f-3ca9-4081-8d43-5dc018a46069",
+     "sequence": 0,
+     "title": "Are there are any damaged tools, power cords, electrical fittings etc.?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "5691967d-fe9c-40f3-ad92-9c30212e1496",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Fix damaged tools, power cords, electrical fittings etc",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d3150dba-1341-4a79-81bb-37c153442b4f",
+     "sequence": 1,
+     "title": "Are there are any \"octopus\" connections (i.e., several power cords in one outlet)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "7d66acc7-2339-4883-9fb6-cc5dc209154a",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Ensure there are no unsafe octopus connections (several power cords in one outlet)",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "da822bf6-ea09-4d98-a9e6-ab1507d0750d",
+     "sequence": 2,
+     "title": "Are any extension cords being used as permanent wiring?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "37b7c5ef-34ae-4855-b9e4-c4c529e0c590",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "yes",
+       "nonCompliant": true,
+       "taskTitle": "Ensure no extension cords are used as permanent wiring",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "77078375-aa0b-44b6-826c-0c1675564720",
+     "sequence": 3,
+     "title": "Are electrical panels properly labelled and accessible?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "16c4f090-66be-4d94-8e10-82a8134d5685",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure all electrical panels are properly labelled and accsible",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "df188ecb-6768-426e-a74e-658e4c389266",
+     "sequence": 4,
+     "title": "Are all electrical covers are in place and secure?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "237598d7-d9f4-456b-b2fb-2cfce1a972ec",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Secure all electrical covers",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "386feb5b-f44a-459f-bf9a-533fc11837a6",
+   "sequence": 11,
+   "title": "Mechanical Lifting Equipment",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "38c72707-9d1e-498d-9dc3-16eef3a24fac",
+     "sequence": 0,
+     "title": "Is the mechanical lifting equipment inspected on a regular basis?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "64395fe6-8e97-4dec-8ee3-ac5ed484a006",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure all lifting equipment is inspected regularly",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "User 115",
+        "CAN Property Managers",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c900edf6-2ab7-4cad-bb81-925ba4894c4e",
+     "sequence": 1,
+     "title": "Are the mechanical lifting equipment operators trained and competent?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "db0632f8-cab8-403d-a7dd-fe14c9f6e593",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Properly train all mechanical lifting equipment operators",
+       "due": {
+        "amount": 3,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8307698c-357b-4707-b0e0-9256dd092380",
+     "sequence": 2,
+     "title": "Is the mechanical lifting equipment in good working order and properly maintained?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "c985d177-31c9-4b3c-9a99-d5fdd6d98bbd",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Repair and maintain  mechanical lifting equipment",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "de68cd46-efc8-42d6-b8d2-1da6c620ab94",
+     "sequence": 3,
+     "title": "Is the mechanical lifting equipment marked with load capacity?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "043cc518-a5fd-4bd9-8030-dca9a89ec7d7",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Mark  mechanical lifting equipment with load capacity",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "0dfce2b8-1998-48db-96d3-9146eb852701",
+   "sequence": 12,
+   "title": "Confined Space",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "35b3fae9-840e-41c7-b4ea-c01e7f27599b",
+     "sequence": 0,
+     "title": "Are there any areas that are identified as a confined space (if applicable)?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "3a323806-0921-4cdd-b466-b2e3dcce24e1",
+       "type": "comments",
+       "title": "Do BGO employees ever enter the space?  Are they adequately trained?",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "yes",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    },
+    {
+     "id": "dfda59c9-a50b-43fc-a924-ee533efbf3a5",
+     "sequence": 1,
+     "title": "Are emergency and rescue procedures  in place for confined spaces?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "2d629e6a-927c-4a23-8caa-9362270cf172",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Implement emergency and rescue procedures for confined spaces",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "User 115",
+        "CAN Property Managers",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6692a8eb-d7d3-4535-b087-1fb60d1b33f3",
+     "sequence": 2,
+     "title": "Is proper signage present for identified confined spaces?",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "cdc8f8b3-2ad0-4ffc-bc3e-415752b19695",
+       "type": "comments",
+       "title": "Hazards Control",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "no",
+       "required": true
+      }
+     ],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Ensure proper signage for confined spaces",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": false,
+       "assignedTo": [
+        "CAN Property Managers",
+        "User 115",
+        "Property Managers"
+       ],
+       "taskTypes": [
+        "Workplace Hazard Assessment"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "5ea7c658-2607-486f-9e4e-b1a6bc5e2c6b",
+   "sequence": 13,
+   "title": "Review and Approvals",
+   "titleFr": null,
+   "location": "OTHER",
+   "questions": [
+    {
+     "id": "d9f259bf-e3e2-4e37-a6d7-4b8f6bdf6c52",
+     "sequence": 0,
+     "title": "Assessors",
+     "label": null,
+     "instructions": null,
+     "titleFr": null,
+     "labelFr": null,
+     "instructionsFr": null,
+     "showWhen": [],
+     "weights": [],
+     "required": false,
+     "answers": [],
+     "followUps": [
+      {
+       "id": "c9a12d6a-3c63-456f-8cba-d0f992b57b55",
+       "type": "text",
+       "title": "Assessor Name 1",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "always",
+       "required": true
+      },
+      {
+       "id": "5dc47307-e520-41ab-a736-13867d933952",
+       "type": "signature",
+       "title": "Signature of Assessor 1",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "always",
+       "required": true
+      },
+      {
+       "id": "bc31cd50-9aa4-4d3b-a4e3-7478b2c0f3dd",
+       "type": "text",
+       "title": "Assessor Name 2",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "always",
+       "required": true
+      },
+      {
+       "id": "3f735314-d763-40b1-a961-eff1523ce364",
+       "type": "signature",
+       "title": "Signature of Assessor 2",
+       "titleFr": null,
+       "link": null,
+       "requiredWhen": "always",
+       "required": true
+      }
+     ],
+     "correctiveActions": []
+    }
+   ]
+  }
+ ]
+}

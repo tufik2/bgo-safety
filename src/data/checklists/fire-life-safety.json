@@ -1,0 +1,2850 @@
+{
+ "id": "effae2c4-3bda-5545-8792-1a7df0d4893a",
+ "module": "fire",
+ "title": "Fire & Life Safety Inspection",
+ "group": "Fire & Life Safety",
+ "sourceModule": null,
+ "level": "Property",
+ "year": "2026",
+ "approvalRequired": true,
+ "showPhotosIcon": true,
+ "showAttachmentIcon": false,
+ "showCommentIcon": true,
+ "importedFrom": "scripts/build-fire-checklist.py",
+ "categories": [
+  {
+   "id": "d8ac8696-102f-5fa2-be10-72d00ddd9722",
+   "sequence": 0,
+   "title": "Fire Safety Plan & Records",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "028d78df-4668-5975-8412-739f142c68a7",
+     "sequence": 0,
+     "title": "Is there a Fire Safety Plan for the building that has been reviewed within the last 12 months?",
+     "label": null,
+     "instructions": "National Fire Code of Canada (NFC) Division B, Section 2.8 / provincial fire code. The plan must reflect current occupancy, staff and systems.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "a4ef299e-ef79-5b38-b9e6-23931cc317d6",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "95b236e1-4484-5729-a520-69370aa95766",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "0ddea847-1918-5fbc-9e10-4bf09bb691b8",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Review and update the Fire Safety Plan; submit to the fire department where required",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6c4ea42e-6808-56b5-85ed-2651d6313630",
+     "sequence": 1,
+     "title": "Is a copy of the Fire Safety Plan kept where the fire department expects it (e.g. fire safety plan box at the main entrance)?",
+     "label": null,
+     "instructions": "Location as approved by the local fire department.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "976417ac-a239-51bb-8f99-bf8033adb274",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "56c3c717-e79b-570e-8263-d0e503b43206",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Place a current copy of the Fire Safety Plan in the approved location",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "53b320f5-5a2c-51c2-9bee-8ceb46be8c88",
+     "sequence": 2,
+     "title": "Are floor plans showing exits, pull stations and extinguishers posted on each floor?",
+     "label": null,
+     "instructions": "Typically posted near elevators and exit stairs.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "a87eaf32-592a-5891-82f2-165fafbb317e",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "0c392ffa-0074-5e94-8c7d-33b076830536",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Post current fire safety floor plans on every floor",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8e2488ef-e0a4-5786-bc75-221435d4713d",
+     "sequence": 3,
+     "title": "Have supervisory staff and fire wardens been trained on their Fire Safety Plan duties, with records kept?",
+     "label": null,
+     "instructions": "Training records should show names, date and content.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "c2cea538-64ba-5b98-be40-7dd19b4ab8b9",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "9aca154c-76ca-5f38-8b0b-f2b27378dd6b",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Train supervisory staff and wardens; record attendance",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ef859d42-2c7b-5b57-9bae-889296d28391",
+     "sequence": 4,
+     "title": "Are inspection, testing and maintenance records for all fire protection systems kept on site for at least the past 2 years?",
+     "label": null,
+     "instructions": "NFC requires records to be retained and available to the fire department.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e2fb8598-b1dd-55b5-b08f-2a04e08abcb0",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "0d03f5d2-cdbb-5b20-bb91-fb059ca61ed4",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Collect missing service reports and set up the on-site fire log book",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e6dda98b-15b3-551d-a91f-ca4cf4480e6d",
+   "sequence": 1,
+   "title": "Fire Drills & Emergency Response",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "ec6e3049-e535-5065-8656-6e25766652dc",
+     "sequence": 0,
+     "title": "Has a fire drill been held within the frequency required for this occupancy (at least once a year for most buildings)?",
+     "label": null,
+     "instructions": "NFC 2.8.3. Some occupancies (e.g. high-rise, care, schools) require more frequent drills.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "92b0f65f-cbe4-560c-b9d4-ddd2aea0ba35",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "97a78980-7847-533a-b5f3-9323d7c83d43",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "8fc1a390-7154-5c8c-986c-9a41d04afac3",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Schedule and hold a fire drill; record the date, time and observations",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "cbcf3cd8-0b81-51fd-9657-f50d42b7d7a4",
+     "sequence": 1,
+     "title": "Is the list of fire wardens and alternates current for every floor or tenant area?",
+     "label": null,
+     "instructions": "Confirm names and contact numbers with tenants.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "f67d57db-68e2-5f2b-aaad-b60c2755d20e",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "3302b931-1737-5928-9de2-231c565bc232",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Update the fire warden list and distribute it",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "81c9a22b-1349-569e-bbe8-33cf46d7c323",
+     "sequence": 2,
+     "title": "Is the list of occupants needing assistance during evacuation current and kept confidential?",
+     "label": null,
+     "instructions": "Persons with disabilities who have self-identified; review with tenants at least annually.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "0094d069-8fcb-5767-8203-754ef82ed450",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "008682a6-c68f-5d73-b802-ae77deada1f0",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Update the list of occupants needing evacuation assistance",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "b240d7f5-037f-56a7-a503-a760970dc212",
+   "sequence": 2,
+   "title": "Fire Alarm & Detection",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "5e48fe36-71f6-505e-b48e-1b37fafc1a25",
+     "sequence": 0,
+     "title": "Has the fire alarm system had its annual inspection and test by a qualified technician, with the report on file?",
+     "label": null,
+     "instructions": "CAN/ULC-S536, Inspection and Testing of Fire Alarm Systems.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "67fc120d-f89e-54d3-844c-df9ede77bc8a",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "47846c7b-d0ae-50bc-b418-c2907822be10",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "e5cc071f-db1f-538a-b0f6-08f19faf4e4e",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book the annual fire alarm inspection and test",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "304f868c-b180-59ee-b861-0d1b149919e8",
+     "sequence": 1,
+     "title": "Have all deficiencies from the last fire alarm inspection been corrected?",
+     "label": null,
+     "instructions": "Check the deficiency list in the last annual report.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "5d9cf988-2588-50f9-b2aa-4e72ebdd66ff",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "81b7275c-4f57-5a2f-aece-49dffd62abe4",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Correct outstanding fire alarm deficiencies and keep proof of repair",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "782a6f40-2890-5a5b-9719-90c98343d19e",
+     "sequence": 2,
+     "title": "Is the fire alarm control panel showing normal, with no trouble or supervisory signals?",
+     "label": null,
+     "instructions": "Check the annunciator and panel display.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "869e9415-06ac-55d1-9be3-ae66cfb86dcb",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "72c7a131-6549-5448-813a-f84ef6160a7e",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Call the fire alarm contractor to clear the trouble or supervisory condition",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c82b8d4d-2358-5bc4-b934-5f15746879e3",
+     "sequence": 3,
+     "title": "Are the required daily and monthly fire alarm checks recorded in the log book?",
+     "label": null,
+     "instructions": "CAN/ULC-S536 daily, monthly and annual requirements.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d84f862b-5f2b-5e19-95c9-9072a4fa06d2",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "da8d7862-27f4-5791-9312-5466f6929576",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Resume and record daily and monthly fire alarm checks",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "65657da0-112a-5370-afc1-1303471cf94e",
+     "sequence": 4,
+     "title": "Are manual pull stations visible, unobstructed and undamaged?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e7cce988-b5b5-5345-be9d-06668168ca72",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "a4d88533-bbbb-5305-9623-8664f9d1bc69",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Clear access to or repair manual pull stations",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6bf665f3-a8d1-58ba-bbd0-21f2ebf33260",
+     "sequence": 5,
+     "title": "Are smoke and heat detectors free of covers, paint, damage or obstructions?",
+     "label": null,
+     "instructions": "Construction dust covers must be removed after work.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "856e79c4-7a61-5cda-bea8-a87760bbe6e8",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "3cedb0d9-840a-56c9-b9fd-7f646a8beabe",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Remove covers or replace damaged detectors",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "9ef9f86d-167a-5ec2-8332-a752429459eb",
+     "sequence": 6,
+     "title": "Is the fire alarm monitored by a listed monitoring station, and was the connection confirmed in the last 12 months?",
+     "label": null,
+     "instructions": "CAN/ULC-S561 monitoring, where required.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "669e83ae-be54-5ec4-ab9f-9098681c6573",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "d4610bfb-c1cd-53d6-8a5d-0cc988681f1b",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Confirm the monitoring contract and test the signal to the monitoring station",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d1b55774-a950-55a5-9fcf-34c9ee12310f",
+   "sequence": 3,
+   "title": "Sprinklers, Standpipes & Fire Pumps",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "79d47f31-a1db-53ba-9f72-258ad1a1101b",
+     "sequence": 0,
+     "title": "Has the sprinkler and standpipe system had its annual inspection and test, with the report on file?",
+     "label": null,
+     "instructions": "NFPA 25 as referenced by the NFC.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "45b6381a-1c04-5ae7-8fb9-1d2cd0d5589d",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "0af934d2-06c8-5ce4-a645-ead74e43a5fd",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "86ef6a38-afeb-5f9a-9b50-4a92805a9969",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book the annual sprinkler and standpipe inspection",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3fe88539-7197-51f6-a402-066166293d3a",
+     "sequence": 1,
+     "title": "Are all sprinkler control valves open and secured (sealed, locked or electrically supervised)?",
+     "label": null,
+     "instructions": "A closed valve leaves the building unprotected; check during every visit.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "eaf2318a-279e-503a-a4bc-1b6252b5d13c",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "c0d83248-cd5d-5388-aa93-42a57952b75a",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Open and secure the control valve; notify the fire department if protection was impaired",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "3f0122a1-9f90-5e37-888c-38b9d0cea020",
+     "sequence": 2,
+     "title": "Is at least 457 mm (18 in.) of clear space maintained below sprinkler heads?",
+     "label": null,
+     "instructions": "No storage up to the ceiling.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "3c29d613-e23e-5348-a335-883e9a22ad86",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "4c755515-6f00-55d7-a517-00e4997daba2",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Lower or relocate storage to restore sprinkler clearance",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "682e6527-64be-5fdf-8828-b134fb4d54fd",
+     "sequence": 3,
+     "title": "Are sprinkler heads free of paint, corrosion, damage or anything hung from them?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "e39e33d3-4bda-5d31-b271-4268d0426dc0",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "ca8b48cf-d778-5284-9866-15f60ed5f8b1",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Replace affected sprinkler heads",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "c8c1ca9d-ff96-51ad-ad65-2be67efe02ec",
+     "sequence": 4,
+     "title": "Is a supply of spare sprinkler heads and the head wrench kept in the spare head cabinet?",
+     "label": null,
+     "instructions": "NFPA 13 / NFPA 25.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "426cd79c-312f-592c-a3f1-b97dd758d586",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "aa8239fa-3ca7-515e-955f-333f6d5e0db3",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Restock the spare sprinkler head cabinet",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "506ffb0e-53f2-5f6c-ad8e-51a66b29fe37",
+     "sequence": 5,
+     "title": "Are fire department connections visible, accessible, capped and undamaged?",
+     "label": null,
+     "instructions": "Clear of snow, landscaping and parked vehicles.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "95634194-2fdb-5cc5-a9b9-84f3d3f3f257",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "22ef4b6d-c316-5c3c-88bd-1ffcfbbccda3",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Clear, cap or repair the fire department connection",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d1e4ef6e-f42d-5a4e-b6af-af5f79f0db92",
+     "sequence": 6,
+     "title": "If there is a fire pump, is it run and tested at the required frequency with records kept?",
+     "label": null,
+     "instructions": "NFPA 25: weekly or monthly churn test depending on driver type. Answer N/A if no fire pump.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "622ea023-ad53-5779-869b-52bdc62a8024",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "93eab132-bf40-506f-aedd-164bda2390fb",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Resume fire pump testing and record results",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "3ef17e6a-622e-588c-b0de-6c506c1f01e2",
+   "sequence": 4,
+   "title": "Portable Fire Extinguishers",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "472639fd-d0fe-5138-b6c1-5bb9b5e42b7a",
+     "sequence": 0,
+     "title": "Are fire extinguishers in their designated locations, mounted, visible and unobstructed?",
+     "label": null,
+     "instructions": "NFPA 10.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "0fb47a59-dbcf-5110-a86a-843f560e85a4",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "daa8a458-4b80-553c-95b4-837df922ef7c",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Replace missing extinguishers and clear access",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "792d4794-f9db-5cc3-b7f1-c135864ea231",
+     "sequence": 1,
+     "title": "Has each extinguisher been visually inspected within the last month, with the tag or record initialled?",
+     "label": null,
+     "instructions": "NFPA 10 monthly inspection.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "7a286d43-2c81-555b-8853-c1e342ee965e",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "f70e42a7-8df5-52f7-a3e4-35cf59c5328f",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Complete and record monthly extinguisher inspections",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "fbf976d7-b125-56b8-bac0-f61204ab3250",
+     "sequence": 2,
+     "title": "Has annual maintenance been done on all extinguishers by a certified technician within the last 12 months?",
+     "label": null,
+     "instructions": "NFPA 10 annual maintenance.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "d7c4f4aa-68de-5de3-8a3a-e17dcada7479",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "cc58e165-08ae-5769-b0fa-41eda5f27c2d",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "a50e7d23-0752-5f39-8c1e-41721f9f6612",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book annual extinguisher maintenance",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "73f19d1b-4f7d-5783-a992-bb80078872ff",
+     "sequence": 3,
+     "title": "Are pressure gauges in the operable range, with seals and pins intact?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "f3413f1a-faf4-5604-b570-ae3c9a092fff",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "cd2b54db-63d2-57fa-8bdf-480961cea85f",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Recharge or replace extinguishers that are discharged or tampered with",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "b0595c39-b52f-5d1e-b43f-84d39a912f63",
+     "sequence": 4,
+     "title": "Are Class K extinguishers provided in commercial cooking areas?",
+     "label": null,
+     "instructions": "Answer N/A if there is no commercial cooking.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "0f113cfb-c5ae-5c22-ad49-6a8e2804eab8",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "bc1e95ab-700b-57fc-82b7-fa30142b26da",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Install Class K extinguishers in commercial kitchens",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "0971c061-67ec-5c4d-bd43-c0386ce90ab3",
+   "sequence": 5,
+   "title": "Means of Egress & Exits",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "fedd9c9c-5e51-55cf-b7e4-fb40680afaa3",
+     "sequence": 0,
+     "title": "Are exit routes, corridors and stairwells clear of storage and obstructions?",
+     "label": null,
+     "instructions": "NFC 2.7.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "bc043d74-9e50-507d-9876-0ffd5171bbbe",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "ca0b5b8c-0d72-5043-b9e2-c3a76d2f0cb9",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Remove obstructions from exit routes",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "a157355b-a462-58db-8df6-3f73b72691f3",
+     "sequence": 1,
+     "title": "Do exit doors open easily from the inside without a key, tool or special knowledge?",
+     "label": null,
+     "instructions": "Check locking hardware and any delayed-egress devices.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "24d7c6d3-f64f-5312-846e-5e795e5bc31f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "0c89c4b6-3750-572b-84c2-dcb41b3fef4c",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Repair or replace exit door hardware",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8764fade-b1b5-5a7c-9826-f12e42abdf41",
+     "sequence": 2,
+     "title": "Are exit signs lit, visible and in good condition?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "3242e29e-bb0e-58f3-8911-adf1e7e4814f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "1bfbc8ab-a0ff-5a84-bd23-e4a6855c134b",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Repair or replace exit signs",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "8f911338-3e55-5b25-9127-0afa8f0bf73b",
+     "sequence": 3,
+     "title": "Do stairwell and exit doors close and latch on their own?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "5a6ade4e-9543-565a-acd5-767ecccbd3f2",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "08312b30-7950-55aa-8422-4a5f284870de",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Repair door closers or latches on exit doors",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d02ceddf-5305-5b35-9a59-3a2fbb1d4652",
+     "sequence": 4,
+     "title": "Are exterior exit discharge areas clear (snow, ice, vehicles, storage) to a public way?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "673cc9c4-3b49-5f37-a779-13227629f4f0",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "a7774799-cce1-56f1-974c-8698569da753",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Clear the exit discharge area",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7243c616-15bc-543b-829f-3e4f44a4c4bc",
+     "sequence": 5,
+     "title": "Are handrails, guards and stair treads in good condition?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "453a6f66-f9ab-5422-b464-b968a33b815c",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "a68c0011-e23c-574b-9db4-b1ad1d88c6f5",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Repair handrails, guards or stair treads",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "67536616-73ac-5de6-8ac2-bec68c596723",
+   "sequence": 6,
+   "title": "Emergency Lighting & Power",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "379b3473-1419-5999-9f7c-aeed39530075",
+     "sequence": 0,
+     "title": "Are monthly tests of emergency lighting units done and recorded?",
+     "label": null,
+     "instructions": "CSA C22.2 No. 141 / NFC.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "74c673db-8a85-519d-8dae-06005fbd3b3f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "d6a02915-0acd-5c7f-8f88-555214d9bc2b",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Resume monthly emergency lighting tests",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "896078f7-5966-5c70-92dd-3d56fafd702d",
+     "sequence": 1,
+     "title": "Has the annual full-duration test of emergency lighting been done?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "c84b0014-64aa-56c5-8dce-5c3eeb4fcaf9",
+       "type": "text",
+       "title": "Date of last review, test or exercise (YYYY-MM-DD)",
+       "requiredWhen": "yes",
+       "required": true
+      },
+      {
+       "id": "2bdd94c7-53a6-5336-98ee-e639e468346f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "4192e5f4-be77-5567-8f40-c2b1541462ec",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book the annual emergency lighting duration test",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e0cc1afb-4e56-56b9-912f-af79e926ad3b",
+     "sequence": 2,
+     "title": "Do emergency lights work when tested and are their lamps and housings undamaged?",
+     "label": null,
+     "instructions": "Press the test button on a sample of units.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "36b1f13b-3265-548e-ac3d-f87d87ab900e",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "184d5c1c-ebb1-5ff1-a691-38b6bc383fa6",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Repair or replace failed emergency lighting units",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "ca628ff6-177c-5caf-8c4d-3195c98dedb8",
+     "sequence": 3,
+     "title": "If there is an emergency generator, is it run under load monthly and serviced annually, with records kept?",
+     "label": null,
+     "instructions": "CSA C282. Answer N/A if no generator.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "fd6d43b4-139d-5cf3-a09b-afa2d74f384b",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "91447027-a435-5be0-85ba-140faf346550",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Resume generator testing and book the annual service",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "e2de05cc-2ee8-5ac2-891b-43e93f4f6007",
+   "sequence": 7,
+   "title": "Fire Separations & Fire Doors",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "9a8ba0ab-32a1-5f32-a6cc-622c0fe3935a",
+     "sequence": 0,
+     "title": "Do fire doors close and latch fully, and are none wedged or tied open?",
+     "label": null,
+     "instructions": "Only approved hold-open devices tied to the fire alarm are allowed.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "0a3145f8-7e2d-5c39-bd65-19ec31a2fcbc",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "868175c5-392a-5d9e-8e08-6dcef9324fce",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Remove wedges and repair fire door closers or latches",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "306aeb80-9341-5021-86a8-5da733f5909c",
+     "sequence": 1,
+     "title": "Are fire door labels present and the doors, frames and hardware undamaged?",
+     "label": null,
+     "instructions": "NFPA 80.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "90891810-07e4-5810-bd34-6410d4d6d33f",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "d59f510e-8e89-5a8c-86cd-282930764d27",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Repair or replace damaged fire doors or hardware",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "6b3f9cf5-559b-5e7a-9133-801079e42268",
+     "sequence": 2,
+     "title": "Are fire separations free of holes and unsealed penetrations (firestopping intact)?",
+     "label": null,
+     "instructions": "Check above ceilings in service rooms after any trade work.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "ee715774-2462-58a4-aca3-e519e0931810",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "316d519e-07e5-55c3-a9d0-8c3ff80cc710",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Seal openings with a listed firestop system",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7a039c2a-4425-5ff0-aae3-66544827e420",
+     "sequence": 3,
+     "title": "Have fire dampers been inspected within the required interval?",
+     "label": null,
+     "instructions": "NFPA 80 / NFPA 105. Answer N/A if none.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "c4a7ae99-3878-56a7-a1b9-451902cff9fa",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "efcccbdb-4343-52d8-a6b0-2a107c192d7e",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book fire damper inspection and repairs",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "6f9774fa-80ce-56da-aac5-584917fa91b6",
+   "sequence": 8,
+   "title": "Housekeeping & Hazardous Materials",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "bd02ff56-533c-5215-9117-470488882f8f",
+     "sequence": 0,
+     "title": "Is combustible waste removed regularly, with no build-up in rooms, shafts or loading areas?",
+     "label": null,
+     "instructions": "NFC 2.4.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "a334e8e3-b49f-511b-97b6-e2f0b21c0a55",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "388611f4-0c12-5986-ae44-1dfe0160f9c5",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Remove accumulated combustible waste and increase pickup frequency",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "f4ce9b87-181f-5013-aaf2-2e963d47fa34",
+     "sequence": 1,
+     "title": "Are flammable and combustible liquids stored in approved containers or cabinets, within allowed quantities?",
+     "label": null,
+     "instructions": "NFC Part 4.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "1ee42d4a-a43b-552b-850b-01dbc096ee9d",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "17dd0d84-b169-579d-9422-50c4f3836eca",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Move flammable liquids into approved storage",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "9c28a077-6591-5fef-ad66-64d506c1cbac",
+     "sequence": 2,
+     "title": "Are electrical, mechanical and sprinkler rooms free of storage?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "f1fa57b0-6e4f-5b94-a6bf-aa7775833e30",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "8c623931-0558-552e-9ba3-5fab08a52c84",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Remove storage from service rooms",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "7d037843-d3ef-5892-bcfe-fbb45a73b80f",
+     "sequence": 3,
+     "title": "Do electrical panels have at least 1 m of clear space in front, with covers and breakers in place?",
+     "label": null,
+     "instructions": "CSA C22.1 (Canadian Electrical Code).",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "58d86651-0226-5132-b942-e8c683af8af0",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "69b67a3b-0206-5745-940d-59ccc7f96913",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Clear access to electrical panels and replace missing covers",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "0ee62390-2699-5529-8b57-b30f1cbfb641",
+     "sequence": 4,
+     "title": "Are extension cords used only temporarily, with no daisy-chained power bars?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "0f412011-b9c1-5eae-8161-190eb3686e67",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "276f9771-9ce7-5e49-b704-7bbfa99b4236",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Remove improper extension cords and power bars",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "2468ea61-a104-5afc-b00f-c211787159e8",
+     "sequence": 5,
+     "title": "Are smoking areas designated away from entrances, with proper non-combustible receptacles?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "a171bad7-f3bc-5ebf-bca2-a1dd84e08566",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "f1662d70-d2ad-5f9a-94d7-bf2a83605e2c",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Designate smoking areas and provide proper receptacles",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "74c0e80f-f5a0-5024-8a74-c2b07734f607",
+   "sequence": 9,
+   "title": "Commercial Cooking",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "bf321354-69f4-57dc-b35a-d1b9668bec50",
+     "sequence": 0,
+     "title": "Have kitchen exhaust hoods and ducts been cleaned at the required frequency, with the certificate posted?",
+     "label": null,
+     "instructions": "NFPA 96. Answer N/A if no commercial cooking.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "9c0959c7-ccc8-5402-8907-eafdef91eb3e",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "1e98c48b-fd20-50e9-8933-e1f539a90d93",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book hood and duct cleaning",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "e986657f-b695-51e8-bcfe-b644a15e51ce",
+     "sequence": 1,
+     "title": "Has the kitchen fire suppression system been serviced within the last 6 months?",
+     "label": null,
+     "instructions": "ULC/ORD-C1254.6 / NFPA 96.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "0c58f6ed-3076-5a3d-a9d4-406816e1c1f7",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "ee4ef52b-7ad8-51f8-a8d3-6af17a66d92b",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book kitchen suppression system service",
+       "due": {
+        "amount": 2,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "950c4559-7b4b-520b-8cbd-9d92323fabfe",
+   "sequence": 10,
+   "title": "Fire Department Access",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "b53a63b0-24c5-5b5c-bcb5-95c411528861",
+     "sequence": 0,
+     "title": "Are fire routes clear, marked and signed, with no parking?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "99051dca-80b9-5b0c-8955-8a1e8c09ce78",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "1c767563-e009-5fa6-9a48-c961daddba09",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Clear the fire route and repair signage",
+       "due": {
+        "amount": 1,
+        "unit": "days"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "d893848d-5b91-5f5f-90e6-8dc1f417dd5f",
+     "sequence": 1,
+     "title": "Are private hydrants accessible, marked and inspected within the last 12 months?",
+     "label": null,
+     "instructions": "NFPA 25. Answer N/A if no private hydrants.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "58dc339c-3730-59e2-9b21-a14a49d5f119",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "18729d3a-a5c2-5bad-a052-0e7e00f8851c",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book the private hydrant inspection and clear access",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "085d473d-dcf6-571f-aab6-2301be53118f",
+     "sequence": 2,
+     "title": "Are the fire department key box and building keys present and current?",
+     "label": null,
+     "instructions": null,
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "89ae67bd-db93-56d2-bd43-64b8608442c5",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "432c4397-8016-500d-bcb2-063702e713ab",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Update keys in the fire department key box",
+       "due": {
+        "amount": 1,
+        "unit": "weeks"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "9e346730-b22e-53f6-b492-83edbb1ffe70",
+   "sequence": 11,
+   "title": "Elevators & Building Systems",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "60d63eb4-abe2-5ec9-a0b2-f14bdafa0bc0",
+     "sequence": 0,
+     "title": "Has elevator firefighters’ emergency operation (fire recall) been tested within the last 12 months?",
+     "label": null,
+     "instructions": "CSA B44. Answer N/A if no elevators.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "34e54f76-7aba-5078-9d00-3297be575c94",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "690039f8-8bc0-56e4-b684-03e319dbc755",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book the elevator fire recall test",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    },
+    {
+     "id": "f9cf2a0e-f153-569f-a79b-69c20b4bc243",
+     "sequence": 1,
+     "title": "Have smoke control and HVAC shutdown functions been tested with the fire alarm within the last 12 months?",
+     "label": null,
+     "instructions": "Integrated testing, CAN/ULC-S1001. Answer N/A if none.",
+     "required": true,
+     "answers": [
+      "yes",
+      "no",
+      "na"
+     ],
+     "followUps": [
+      {
+       "id": "98608d47-740e-514c-bc4d-76065fa2a81a",
+       "type": "comments",
+       "title": "Deficiency and action taken",
+       "requiredWhen": "no",
+       "required": true
+      },
+      {
+       "id": "31939894-a8ff-560a-8c9d-697b9226f22e",
+       "type": "comments",
+       "title": "Reason not applicable",
+       "requiredWhen": "na",
+       "required": false
+      }
+     ],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [
+      {
+       "answer": "no",
+       "nonCompliant": true,
+       "taskTitle": "Book integrated testing of fire safety systems",
+       "due": {
+        "amount": 1,
+        "unit": "months"
+       },
+       "createTask": true,
+       "assignedTo": [
+        "Property Manager"
+       ],
+       "taskTypes": [
+        "Fire & Life Safety"
+       ]
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "id": "d3981bbd-db16-5ea3-8d62-f790596fcbc6",
+   "sequence": 12,
+   "title": "Review and Approvals",
+   "location": "Other",
+   "questions": [
+    {
+     "id": "7a5bfd00-2d6c-525a-bc7d-f07b6661b959",
+     "sequence": 0,
+     "title": "Assessors",
+     "label": null,
+     "instructions": null,
+     "required": false,
+     "answers": [],
+     "showWhen": [],
+     "weights": [],
+     "correctiveActions": [],
+     "followUps": [
+      {
+       "id": "6d16ee1f-4210-5265-b1c1-3b73b1778cd6",
+       "type": "text",
+       "title": "Assessor Name",
+       "requiredWhen": "always",
+       "required": true
+      },
+      {
+       "id": "f8045d51-bee5-593b-9ac3-cd15a308a3e4",
+       "type": "signature",
+       "title": "Signature of Assessor",
+       "requiredWhen": "always",
+       "required": true
+      },
+      {
+       "id": "f1617d3c-b021-582a-b186-1b70db4427f7",
+       "type": "text",
+       "title": "Second Assessor Name",
+       "requiredWhen": "always",
+       "required": false
+      },
+      {
+       "id": "0c531b48-feb4-59de-8ee3-ef4b959a0858",
+       "type": "signature",
+       "title": "Signature of Second Assessor",
+       "requiredWhen": "always",
+       "required": false
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

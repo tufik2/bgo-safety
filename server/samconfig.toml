@@ -1,0 +1,41 @@
+# BGO Safety — deploy settings. Fill in the <...> values once, then deploy with:
+#   sam build && sam deploy
+# (guide: "Configuration checklist" and section 4). Re-running the same command later updates the stack.
+version = 0.1
+
+[default.global.parameters]
+region = "ca-central-1"                      # the API and all data stay in Canada
+
+[default.build.parameters]
+cached = true
+
+[default.deploy.parameters]
+stack_name = "bgo-safety-prod"
+resolve_s3 = true                            # SAM creates/uses its own bucket for the uploaded code
+s3_prefix = "bgo-safety-prod"
+capabilities = "CAPABILITY_IAM"              # the stack creates the Lambda's IAM role
+confirm_changeset = true                     # shows what will change and asks before applying
+parameter_overrides = [
+  "Stage=prod",
+  # Email and text codes: your existing SES / SNS setup
+  "SesRegion=us-east-1",
+  "SnsRegion=us-east-1",
+  "SesFromAddress=no-reply@refineddata.com",
+  "SesFromName=BGO Safety",
+  # Texts go out like Refined Risk's existing 2FA: sender ID RefinedRisk and no forced origination number.
+  # No forced sending number ("none"): forcing the toll-free number got texts blocked by Telus.
+  "SnsOriginationNumber=none",
+  # Settings are listed explicitly because sam deploy keeps a setting's previous value when it isn't listed here.
+  "SnsSenderId=RefinedRisk",
+  "SmsWording=bgo",                          # bgo = BGO Safety's own text; registered-sample = "RefinedRisk - Verification code is ..."
+  # Custom address: the *.refineddata.com certificate must be in ca-central-1
+  "ApiDomainName=bgosafety.refineddata.com",
+  "ApiCertificateArn=<arn:aws:acm:ca-central-1:...:certificate/...>",
+  # Single sign-on: Microsoft for testing (switch to SsoMethod=okta + SsoDomain=https://bgo.okta.com later)
+  "SsoMethod=entra",
+  "SsoTenantId=<Directory (tenant) ID>",
+  "SsoClientId=<Application (client) ID>",
+  "AllowedEmailDomains=refineddata.com,bgo.com",
+  # POC demo surveys for 2024-2025 (set to false before real use)
+  "DemoMode=true",
+]
